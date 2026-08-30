@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Work — The JO Times</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true">View &rarr;</div>
+
+<div class="shell">
+
+  <header id="front">
+    <div class="topbar mono">
+      <span id="topbar-left"></span>
+      <span id="topbar-right"></span>
+    </div>
+    <div class="masthead">
+      <div>
+        <h1 class="masthead__title" id="masthead-title"></h1>
+        <div class="masthead__sub">
+          <span class="mono" id="masthead-role"></span>
+          <span class="mono mono--mute" id="masthead-tagline"></span>
+        </div>
+      </div>
+      <div class="masthead__meta mono" id="masthead-meta"></div>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list">
+        <li><a href="index.html">Front Page</a></li>
+        <li><a href="index.html#about">About Me</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <p class="nav__status mono"><span class="dot"></span> <span id="nav-status"></span></p>
+    </nav>
+  </header>
+
+  <div class="band band--tight">
+    <a class="link back" href="index.html">&larr; Back to Home</a>
+    <div class="sechead">
+      <h2 id="work-h">The Work</h2>
+      <div class="sechead__meta mono" id="works-meta"></div>
+    </div>
+    <p class="teaser__dek" id="works-intro" style="margin-top:clamp(16px,2vw,26px)"></p>
+  </div>
+
+  <div id="stories"></div>
+
+  <footer class="foot">
+    <div class="foot__top">
+      <p class="foot__mast" id="foot-mast"></p>
+      <div class="foot__meta mono" id="foot-meta"></div>
+    </div>
+    <p class="endmark"><span>End of edition</span></p>
+  </footer>
+
+</div>
+
+<script src="config.js"></script>
+<script>
+document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
+document.getElementById('topbar-right').textContent = CONFIG.tagline;
+document.getElementById('masthead-title').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
+document.getElementById('masthead-role').textContent = CONFIG.role;
+document.getElementById('masthead-tagline').textContent = CONFIG.tagline;
+document.getElementById('masthead-meta').innerHTML = `<span>${CONFIG.issueLine}</span><span>${CONFIG.contact.location}</span>`;
+document.getElementById('nav-status').textContent = `Portfolio last updated ${new Date().getFullYear()}`;
+document.getElementById('works-meta').innerHTML = `<span>${CONFIG.workCategories.length} categories</span>`;
+document.getElementById('works-intro').textContent = CONFIG.works.pageIntro;
+
+/* ---------- category icons (simple line-art, monochrome) ---------- */
+function categoryIcon(kind){
+  const s = 'stroke="var(--ink)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"';
+  const wrap = inner => `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">${inner}</svg>`;
+  switch(kind){
+    case 'uiux':
+      return wrap(`<rect x="14" y="18" width="72" height="52" rx="3" ${s}/><line x1="14" y1="32" x2="86" y2="32" ${s}/><circle cx="22" cy="25" r="2" fill="var(--ink)"/><circle cx="30" cy="25" r="2" fill="var(--ink)"/><path d="M26 46h30M26 56h44M26 66h20" ${s}/>`);
+    case 'motion':
+      return wrap(`<circle cx="50" cy="50" r="34" ${s}/><path d="M42 36 L68 50 L42 64 Z" fill="var(--ink)"/>`);
+    case 'graphic':
+      return wrap(`<path d="M20 80 L60 20 L80 32 L40 92 Z" ${s}/><path d="M20 80 L30 68 L40 92 Z" fill="var(--ink)"/>`);
+    default: return wrap('');
+  }
+}
+
+/* ---------- render each category as a "story" ---------- */
+const cats = CONFIG.workCategories;
+const stories = cats.map((c,i)=>{
+  const count = CONFIG.projects.filter(p=>p.category === c.slug).length;
+  return `
+  <article class="story${i % 2 ? ' story--flip' : ''}">
+    <div class="story__rail mono">
+      <span><b class="no">${String(i+1).padStart(2,'0')}</b> / ${cats.length}</span>
+      <span>${count} project${count === 1 ? '' : 's'}</span>
+    </div>
+    <div class="story__grid">
+      <figure class="story__fig">
+        <div class="plate story__plate">
+          <span class="plate__tag mono">${String(i+1).padStart(2,'0')}</span>
+          <div class="plate__icon">${categoryIcon(c.icon)}</div>
+        </div>
+      </figure>
+      <div class="story__body">
+        <a class="story__link" href="${c.page}" data-cursor="View &rarr;">
+          <h3><span class="rvl"><span>${c.name}</span></span></h3>
+        </a>
+        <p class="story__dek fade" style="--d:120ms">${c.blurb}</p>
+        <a class="link story__cta fade" style="--d:200ms" href="${c.page}" data-cursor="View &rarr;">Read further <span class="arw">&rarr;</span></a>
+      </div>
+    </div>
+  </article>`;
+}).join('');
+document.getElementById('stories').innerHTML = stories;
+
+document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
+document.getElementById('foot-meta').innerHTML = `
+  <span>${CONFIG.name} — ${CONFIG.role}</span>
+  <span>Set in Bodoni Moda, Newsreader &amp; IBM Plex Mono</span>
+  <span>${CONFIG.contact.finePrint}</span>
+`;
+
+/* ---------- reveal on scroll ---------- */
+const targets = document.querySelectorAll('.band, .story, .foot, header#front');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin:'0px 0px -10% 0px', threshold:0 });
+  targets.forEach(t=>io.observe(t));
+} else {
+  targets.forEach(t=>t.classList.add('is-in'));
+}
+requestAnimationFrame(()=>document.querySelector('header#front').classList.add('is-in'));
+
+/* ---------- press-stamp cursor ---------- */
+const cursor = document.getElementById('cursor');
+const fine = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+if(fine){
+  let x=0,y=0,cx=0,cy=0,raf=null;
+  const loop = ()=>{
+    cx += (x-cx)*0.22; cy += (y-cy)*0.22;
+    cursor.style.translate = `${cx}px ${cy}px`;
+    raf = Math.abs(x-cx) > 0.4 || Math.abs(y-cy) > 0.4 ? requestAnimationFrame(loop) : null;
+  };
+  document.addEventListener('pointermove',(e)=>{
+    x = e.clientX; y = e.clientY;
+    if(!raf) raf = requestAnimationFrame(loop);
+  }, { passive:true });
+  document.addEventListener('pointerover',(e)=>{
+    const hit = e.target.closest('[data-cursor]');
+    if(!hit) return;
+    cursor.innerHTML = hit.dataset.cursor;
+    cursor.classList.add('on');
+  });
+  document.addEventListener('pointerout',(e)=>{
+    if(e.target.closest('[data-cursor]')) cursor.classList.remove('on');
+  });
+}
+</script>
+</body>
+</html>
