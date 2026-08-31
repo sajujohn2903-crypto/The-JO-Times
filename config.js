@@ -10,6 +10,17 @@ const CONFIG = {
   issueLine: "Est. 2024 — Vol. I, No. 07",
   maskheadShort: "JO",
 
+  // The paragraph(s) shown in the hero, right under the big tagline
+  // headline above. Kept separate from aboutIntro.short below — editing
+  // one does not affect the other.
+  heroDek: [
+    "Fresh from the world of pixels, people and problems, John Saju has made a habit of turning curious questions into thoughtful design. With a background in animation and visual effects, he now works across UX, service design and visual storytelling.",
+    "The verdict from the desk? A designer to keep an eye on."
+  ],
+
+  // Shown under "THE JO TIMES" masthead title, styled in crimson red.
+  editorNote: "Message from the Editor — You are experiencing my design capabilities throughout this website.",
+
   heroVideo: {
     // Set this to a video file's URL (.mp4 or .webm) any time and it will
     // replace the decorative halftone illustration in the hero — it plays
@@ -140,11 +151,11 @@ const CONFIG = {
     { url: "", caption: "At the desk, somewhere between research and rework." }
   ],
 
-  aboutPhoto: {
-    // Swap this for a real photo any time — replace the src on the
-    // <img id="about-photo-img"> tag, or point this url at your image
-    // and it will be used automatically.
-    url: "headshot.jpg",
+  aboutVideo: {
+    // Set this to a video file's URL (.mp4 or .webm) and it will play in
+    // the About section, muted and looped — full color, no grayscale or
+    // halftone texture applied (unlike the site's other photo spots).
+    url: "aboutvideo.mp4",
     caption: "John Saju, UI/UX Designer"
   },
 
@@ -173,9 +184,7 @@ const CONFIG = {
     phone: "+44 7553129991",
     location: "Belfast, Northern Ireland",
     socials: [
-      { label:"LinkedIn", url:"#" },
-      { label:"Dribbble", url:"#" },
-      { label:"Instagram", url:"#" }
+      { label:"LinkedIn", url:"#" }
     ],
     finePrint: `© ${new Date().getFullYear()} The Design Times. All rights reserved. Printed digitally, read anywhere.`
   },

@@ -3,11 +3,13 @@
 A small, dependency-free static site — plain HTML/CSS/JS, no build step,
 no npm install. Styled as an editorial broadsheet: serif display
 headlines, mono labels, halftone "plate" imagery, and reveal-on-scroll
-animation. It's made of eight files that all need to sit together in the
+animation. It's made of nine files that all need to sit together in the
 same folder:
 
-- **`index.html`** — the front page (masthead, hero, award, works teaser,
-  about teaser, expertise index, tools, contact)
+- **`index.html`** — the front page (masthead, hero, award teaser, works
+  teaser, about teaser, expertise index, tools, contact)
+- **`award.html`** — the full Award article, with a photo beside the
+  opening paragraph
 - **`works.html`** — a hub listing the three work categories, each with a
   "Read further" link to its own page
 - **`work-ui-ux.html`** — every UI/UX Design project, as alternating
@@ -17,9 +19,9 @@ same folder:
 - **`about.html`** — the complete "About" feature article with cross-heads
   and photos
 - **`styles.css`** — all shared styling for every page
-- **`config.js`** — all editable content (name, copy, projects, skills,
-  tools, the About article, and contact details) for every page, in one
-  place
+- **`config.js`** — all editable content (name, copy, the award, projects,
+  skills, tools, the About article, and contact details) for every page,
+  in one place
 
 The only external resource any page loads is a Google Fonts stylesheet
 (Bodoni Moda, Newsreader, and IBM Plex Mono).
@@ -27,15 +29,15 @@ The only external resource any page loads is a Google Fonts stylesheet
 ## Deploy to GitHub Pages
 
 1. Create a new repository on GitHub (or use an existing one).
-2. Add all eight files to the **root** of the repository, all together
+2. Add all nine files to the **root** of the repository, all together
    (this matters: they reference each other by relative path, and GitHub
    Pages looks for `index.html` at the root by default).
    - Via the GitHub website: click **Add file → Upload files**, drag in all
-     eight files at once, then commit.
+     nine files at once, then commit.
    - Via git:
      ```bash
      git init
-     git add index.html works.html work-ui-ux.html work-motion-graphics.html work-graphic-design.html about.html styles.css config.js
+     git add index.html award.html works.html work-ui-ux.html work-motion-graphics.html work-graphic-design.html about.html styles.css config.js
      git commit -m "Add portfolio site"
      git branch -M main
      git remote add origin https://github.com/<your-username>/<your-repo>.git
@@ -67,9 +69,11 @@ redeploy automatically.
 
 ## How the site fits together
 
-- The front page's **Works** section is a short teaser (headline, blurb, a
-  plate image, and an "Explore the works" link) — clicking it takes
-  visitors to `works.html`, a hub listing the three categories:
+- The front page's **Award** section shows a short excerpt and a "Read the
+  article" link to `award.html` — the full three-paragraph story, with the
+  award photo running beside the opening paragraph.
+- The front page's **Works** section is a short teaser with an "Explore the
+  works" link to `works.html`, a hub listing the three categories:
   **UI/UX Design**, **Motion Graphics**, and **Graphic Design**. Each
   category has a "Read further" link to its own dedicated page listing
   just that category's projects.
@@ -85,15 +89,20 @@ redeploy automatically.
   photos placed between the paragraphs.
 - **Expertise** lists every skill as a numbered index entry on the front
   page; **Toolkit** lists the software you use.
-- The **Award** section behaves like a real news item: a short excerpt is
-  shown up front, and "Read the article" expands the fuller story in place.
 
-## Adding your own photos
+## Adding your own photos and videos
 
-Several spots (the Award photo, the Works photo, the About photo, and the
-three About-article photos) currently show a simple drawn placeholder
-inside a halftone "plate" because no real image has been set. To use a real
-photo anywhere, find its `photo` (or `aboutImages`) entry in `config.js`
-and set `url` to an image link — it'll replace the placeholder
-automatically and pick up the same halftone/grayscale press treatment as
-the rest of the site's imagery.
+Several spots currently show a simple drawn placeholder inside a halftone
+"plate" because no real media has been set. To use a real photo or video
+anywhere, find its entry in `config.js` and set `url` to a file link:
+
+- `heroVideo.url` — a video (.mp4/.webm) for the hero; plays muted and
+  looped, in plain full color (no press/grayscale treatment)
+- `aboutVideo.url` — same idea, for the About section's video
+- `award.photo.url`, `works.photo.url`, and the `aboutImages` entries —
+  still expect a photo URL, and will pick up the site's halftone/grayscale
+  press treatment automatically
+
+Photo/video files need to be uploaded alongside your HTML files (e.g. in
+an `images` folder you create), with the path in `config.js` matching
+exactly where you put them.

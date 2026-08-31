@@ -18,14 +18,13 @@
   <header id="front">
     <div class="topbar mono">
       <span id="topbar-left"></span>
-      <span id="topbar-right"></span>
     </div>
     <div class="masthead">
       <div>
         <h1 class="masthead__title" id="masthead-title"></h1>
         <div class="masthead__sub">
           <span class="mono" id="masthead-role"></span>
-          <span class="mono mono--mute" id="masthead-tagline"></span>
+          <span class="mono editor-note" id="masthead-tagline"></span>
         </div>
       </div>
       <div class="masthead__meta mono" id="masthead-meta"></div>
@@ -68,10 +67,9 @@
 const CATEGORY_SLUG = 'graphic-design';
 
 document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
-document.getElementById('topbar-right').textContent = CONFIG.tagline;
 document.getElementById('masthead-title').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('masthead-role').textContent = CONFIG.role;
-document.getElementById('masthead-tagline').textContent = CONFIG.tagline;
+document.getElementById('masthead-tagline').textContent = CONFIG.editorNote;
 document.getElementById('masthead-meta').innerHTML = `<span>${CONFIG.issueLine}</span><span>${CONFIG.contact.location}</span>`;
 document.getElementById('nav-status').textContent = `Portfolio last updated ${new Date().getFullYear()}`;
 

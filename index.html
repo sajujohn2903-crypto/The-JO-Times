@@ -50,7 +50,6 @@
   <header id="front">
     <div class="topbar mono">
       <span id="topbar-left"></span>
-      <span id="topbar-right"></span>
     </div>
 
     <div class="masthead">
@@ -58,7 +57,7 @@
         <h1 class="masthead__title" id="masthead-title"><span class="rvl"><span id="masthead-title-text"></span></span></h1>
         <div class="masthead__sub">
           <span class="mono" id="masthead-role"></span>
-          <span class="mono mono--mute" id="masthead-tagline"></span>
+          <span class="mono editor-note" id="masthead-tagline"></span>
         </div>
       </div>
       <div class="masthead__meta mono fade" style="--d:340ms" id="masthead-meta"></div>
@@ -79,7 +78,7 @@
     <div class="hero__left">
       <p class="kicker mono mono--l fade" id="hero-kicker"></p>
       <h2 id="lede" class="hero__h1"><span class="rvl"><span id="hero-h1" style="--d:120ms"></span></span></h2>
-      <p class="hero__dek fade" style="--d:520ms" id="hero-dek"></p>
+      <div class="hero__dek fade" style="--d:520ms" id="hero-dek"></div>
       <div class="hero__cta fade" style="--d:640ms">
         <a class="link" href="#work" data-cursor="Scroll &darr;">See the work <span class="arw">&rarr;</span></a>
         <div class="hero__byline mono" id="hero-byline"></div>
@@ -120,7 +119,7 @@
           <p id="award-excerpt"></p>
           <p id="award-excerpt2"></p>
           <div class="note__more">
-            <button class="link" id="award-read-more">Read the article <span class="arw">&rarr;</span></button>
+            <a class="link" id="award-read-more" href="award.html" data-cursor="Read &rarr;">Read the article <span class="arw">&rarr;</span></a>
           </div>
         </div>
       </div>
@@ -158,8 +157,8 @@
     </div>
     <div class="teaser teaser--flip">
       <figure class="teaser__plate-wrap fade" style="--d:140ms">
-        <div class="plate teaser__plate">
-          <img id="about-photo-img" alt="" style="display:none;">
+        <div class="plate plate--plain teaser__plate">
+          <video id="about-video" autoplay muted loop playsinline style="display:none;"></video>
           <div class="plate__icon" id="about-photo-placeholder"></div>
         </div>
         <figcaption><span id="about-photo-caption"></span></figcaption>
@@ -262,10 +261,9 @@ function toolIcon(logo){
 
 /* ---------- header / masthead ---------- */
 document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
-document.getElementById('topbar-right').textContent = CONFIG.tagline;
 document.getElementById('masthead-title-text').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('masthead-role').textContent = CONFIG.role;
-document.getElementById('masthead-tagline').textContent = CONFIG.tagline;
+document.getElementById('masthead-tagline').textContent = CONFIG.editorNote;
 
 const today = new Date();
 const todayStr = today.toLocaleDateString('en-GB', { day:'2-digit', month:'short', year:'numeric' });
@@ -279,7 +277,7 @@ document.getElementById('nav-status').textContent = `Portfolio last updated ${to
 /* ---------- hero ---------- */
 document.getElementById('hero-kicker').textContent = CONFIG.role;
 document.getElementById('hero-h1').textContent = CONFIG.tagline;
-document.getElementById('hero-dek').textContent = CONFIG.aboutIntro.short;
+document.getElementById('hero-dek').innerHTML = CONFIG.heroDek.map(p=>`<p>${p}</p>`).join('');
 document.getElementById('hero-byline').innerHTML = `
   <span>Reported by ${CONFIG.name}</span>
   <span>Filed from ${CONFIG.contact.location}</span>
@@ -325,24 +323,6 @@ if(A.photo.url){
   awardPhotoPlaceholder.innerHTML = iconSVG('award');
 }
 
-const awardReadMoreBtn = document.getElementById('award-read-more');
-let awardExpanded = false;
-awardReadMoreBtn.addEventListener('click', ()=>{
-  awardExpanded = !awardExpanded;
-  if(awardExpanded){
-    const extra = document.createElement('div');
-    extra.id = 'award-extra';
-    extra.className = 'note__extra';
-    extra.innerHTML = A.fullText.map(p=>`<p>${p}</p>`).join('');
-    document.querySelector('.note__cols').insertBefore(extra, document.querySelector('.note__more'));
-    awardReadMoreBtn.innerHTML = 'Show less <span class="arw" style="transform:rotate(180deg)">&rarr;</span>';
-  } else {
-    const extra = document.getElementById('award-extra');
-    if(extra) extra.remove();
-    awardReadMoreBtn.innerHTML = 'Read the article <span class="arw">&rarr;</span>';
-  }
-});
-
 /* ---------- works teaser ---------- */
 const W = CONFIG.works;
 document.getElementById('works-title').textContent = W.eyebrow;
@@ -367,12 +347,12 @@ document.getElementById('about-meta').innerHTML = `<span>About the designer</spa
 document.getElementById('about-headline').textContent = AB.headline;
 document.getElementById('about-short').textContent = AB.short;
 
-const aboutPhotoImg = document.getElementById('about-photo-img');
+const aboutVideo = document.getElementById('about-video');
 const aboutPhotoPlaceholder = document.getElementById('about-photo-placeholder');
-document.getElementById('about-photo-caption').textContent = CONFIG.aboutPhoto.caption;
-if(CONFIG.aboutPhoto.url){
-  aboutPhotoImg.src = CONFIG.aboutPhoto.url;
-  aboutPhotoImg.style.display = 'block';
+document.getElementById('about-photo-caption').textContent = CONFIG.aboutVideo.caption;
+if(CONFIG.aboutVideo.url){
+  aboutVideo.src = CONFIG.aboutVideo.url;
+  aboutVideo.style.display = 'block';
   aboutPhotoPlaceholder.style.display = 'none';
 } else {
   aboutPhotoPlaceholder.innerHTML = iconSVG('about');
