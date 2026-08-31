@@ -16,7 +16,7 @@ const CONFIG = {
     // muted, looped, and full color (no grayscale/press filter, unlike
     // the site's photo spots elsewhere). Leave blank to keep the
     // illustration.
-    url: ""
+    url: "herovid.mp4"
   },
 
   award: {
