@@ -25,7 +25,7 @@ const CONFIG = {
     photo: {
       // Swap this for a real photo any time — set url to an image link
       // (e.g. from the award ceremony) and it will be used automatically.
-      url: "",
+      url: "headshot.jpg",
       caption: "Photograph: Award Ceremony 2025"
     }
   },
