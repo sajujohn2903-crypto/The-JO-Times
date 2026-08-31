@@ -155,7 +155,7 @@ const CONFIG = {
     // Set this to a video file's URL (.mp4 or .webm) and it will play in
     // the About section, muted and looped — full color, no grayscale or
     // halftone texture applied (unlike the site's other photo spots).
-    url: "aboutvid.mp4",
+    url: "aboutvideo.mp4",
     caption: "John Saju, UI/UX Designer"
   },
 
