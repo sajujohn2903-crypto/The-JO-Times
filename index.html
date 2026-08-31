@@ -89,7 +89,8 @@
     <div class="hero__right">
       <figure>
         <div class="portrait hero__plate">
-          <div class="press" style="--d:420ms"><svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Halftone portrait"><use href="#portrait"/></svg></div>
+          <video id="hero-video" autoplay muted loop playsinline style="display:none;"></video>
+          <div class="press" id="hero-photo-placeholder" style="--d:420ms"><svg viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Halftone portrait"><use href="#portrait"/></svg></div>
         </div>
         <figcaption class="hero__caption">
           <p id="hero-cap1"></p>
@@ -285,6 +286,14 @@ document.getElementById('hero-byline').innerHTML = `
 `;
 document.getElementById('hero-cap1').textContent = `${CONFIG.name} — ${CONFIG.role}`;
 document.getElementById('hero-cap2').textContent = CONFIG.tagline;
+
+const heroVideo = document.getElementById('hero-video');
+const heroPhotoPlaceholder = document.getElementById('hero-photo-placeholder');
+if(CONFIG.heroVideo && CONFIG.heroVideo.url){
+  heroVideo.src = CONFIG.heroVideo.url;
+  heroVideo.style.display = 'block';
+  heroPhotoPlaceholder.style.display = 'none';
+}
 
 /* ---------- stat strip ---------- */
 const skillCount = CONFIG.skills.reduce((sum,g)=>sum+g.items.length,0);

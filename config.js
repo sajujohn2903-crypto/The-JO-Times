@@ -10,6 +10,15 @@ const CONFIG = {
   issueLine: "Est. 2024 — Vol. I, No. 07",
   maskheadShort: "JO",
 
+  heroVideo: {
+    // Set this to a video file's URL (.mp4 or .webm) any time and it will
+    // replace the decorative halftone illustration in the hero — it plays
+    // muted, looped, and full color (no grayscale/press filter, unlike
+    // the site's photo spots elsewhere). Leave blank to keep the
+    // illustration.
+    url: ""
+  },
+
   award: {
     ribbon: "Award",
     eyebrow: "Breaking — Design News",
@@ -41,7 +50,7 @@ const CONFIG = {
       // Swap this for a real photo any time — set url to an image link
       // (e.g. a hero shot from one of the projects) and it will be used
       // automatically.
-      url: "artgallery.jpg",
+      url: "",
       caption: "A look at the work"
     }
   },
@@ -135,7 +144,7 @@ const CONFIG = {
     // Swap this for a real photo any time — replace the src on the
     // <img id="about-photo-img"> tag, or point this url at your image
     // and it will be used automatically.
-    url: "headshot.jpg",
+    url: "",
     caption: "John Saju, UI/UX Designer"
   },
 
