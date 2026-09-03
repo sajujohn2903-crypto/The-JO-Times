@@ -1,10 +1,10 @@
 backend:
   name: github
   # ↓ Change these three to match your actual GitHub repo before this works.
-  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  repo: sajujohn2903-crypto/The-JO-Times
   branch: main
   # ↓ The URL of your OAuth proxy (see the setup guide) — no trailing slash.
-  base_url: https://YOUR-OAUTH-PROXY.example.com
+  base_url: https://the-jo-times.vercel.app
 
 # Where uploaded images/videos are stored in your repo, and the path
 # used to reference them on the live site (these should match).
@@ -12,8 +12,8 @@ media_folder: "images"
 public_folder: "images"
 
 # Shown at the top of the admin panel.
-site_url: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO-NAME/
-display_url: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO-NAME/
+site_url: https://sajujohn2903-crypto.github.io/The-JO-Times/
+display_url: https://sajujohn2903-crypto.github.io/The-JO-Times/
 logo_url: ""
 
 locale: "en"
