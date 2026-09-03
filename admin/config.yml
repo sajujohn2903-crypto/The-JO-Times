@@ -4,7 +4,7 @@ backend:
   repo: sajujohn2903-crypto/The-JO-Times
   branch: main
   # ↓ The URL of your OAuth proxy (see the setup guide) — no trailing slash.
-  base_url: https://the-jo-times.vercel.app
+  base_url: https://johnport-zeta.vercel.app
      auth_endpoint: api/auth
 
 # Where uploaded images/videos are stored in your repo, and the path
