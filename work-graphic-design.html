@@ -60,8 +60,18 @@
 
 </div>
 
-<script src="config.js"></script>
 <script>
+fetch('content.json').then(function(r){ return r.json(); }).then(function(CONFIG){
+  // apply CMS-editable colors
+  if (CONFIG.colors) {
+    var root = document.documentElement.style;
+    root.setProperty('--paper', CONFIG.colors.paper);
+    root.setProperty('--paper-2', CONFIG.colors.paper2);
+    root.setProperty('--ink', CONFIG.colors.ink);
+    root.setProperty('--red', CONFIG.colors.red);
+    root.setProperty('--red-deep', CONFIG.colors.redDeep);
+  }
+
 /* Change this to reuse this exact page template for a different
    category — it must match a "slug" in CONFIG.workCategories. */
 const CATEGORY_SLUG = 'graphic-design';
@@ -160,7 +170,7 @@ const stories = catProjects.map((p,i)=>`
       </div>
     </div>
   </article>`).join('');
-document.getElementById('stories').innerHTML = stories || `<div class="band"><p class="teaser__dek">No projects in this category yet — add some to CONFIG.projects in config.js.</p></div>`;
+document.getElementById('stories').innerHTML = stories || `<div class="band"><p class="teaser__dek">No projects in this category yet — add some to CONFIG.projects in content.json (or via the admin panel).</p></div>`;
 
 document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('foot-meta').innerHTML = `
@@ -205,6 +215,7 @@ if(fine){
     if(e.target.closest('[data-cursor]')) cursor.classList.remove('on');
   });
 }
+});
 </script>
 </body>
 </html>

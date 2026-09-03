@@ -59,8 +59,18 @@
 
 </div>
 
-<script src="config.js"></script>
 <script>
+fetch('content.json').then(function(r){ return r.json(); }).then(function(CONFIG){
+  // apply CMS-editable colors
+  if (CONFIG.colors) {
+    var root = document.documentElement.style;
+    root.setProperty('--paper', CONFIG.colors.paper);
+    root.setProperty('--paper-2', CONFIG.colors.paper2);
+    root.setProperty('--ink', CONFIG.colors.ink);
+    root.setProperty('--red', CONFIG.colors.red);
+    root.setProperty('--red-deep', CONFIG.colors.redDeep);
+  }
+
 document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
 document.getElementById('masthead-title').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('masthead-role').textContent = CONFIG.role;
@@ -147,6 +157,7 @@ if('IntersectionObserver' in window){
 requestAnimationFrame(()=>{
   document.querySelector('header#front').classList.add('is-in');
   document.querySelector('.band').classList.add('is-in');
+});
 });
 </script>
 </body>
