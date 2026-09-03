@@ -1,0 +1,230 @@
+backend:
+  name: github
+  # ↓ Change these three to match your actual GitHub repo before this works.
+  repo: YOUR-GITHUB-USERNAME/YOUR-REPO-NAME
+  branch: main
+  # ↓ The URL of your OAuth proxy (see the setup guide) — no trailing slash.
+  base_url: https://YOUR-OAUTH-PROXY.example.com
+
+# Where uploaded images/videos are stored in your repo, and the path
+# used to reference them on the live site (these should match).
+media_folder: "images"
+public_folder: "images"
+
+# Shown at the top of the admin panel.
+site_url: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO-NAME/
+display_url: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPO-NAME/
+logo_url: ""
+
+locale: "en"
+
+collections:
+  - name: "site"
+    label: "Website Content"
+    files:
+      - name: "content"
+        label: "Everything"
+        file: "content.json"
+        description: "Every editable piece of the site lives here — organized into sections below."
+        fields:
+
+          - label: "Identity & Masthead"
+            name: "identity_group"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Your Name", name: "name", widget: "string" }
+              - { label: "Role / Title", name: "role", widget: "string" }
+              - { label: "Tagline (big hero headline)", name: "tagline", widget: "string" }
+              - { label: "Issue Line (masthead meta text)", name: "issueLine", widget: "string" }
+              - { label: "Masthead Short Code (e.g. JO)", name: "maskheadShort", widget: "string" }
+              - { label: "Editor's Note (shown in crimson under the masthead)", name: "editorNote", widget: "text" }
+
+          - label: "Hero Section"
+            name: "hero_group"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Hero Paragraphs"
+                name: "heroDek"
+                widget: "list"
+                hint: "One or more paragraphs shown under the tagline."
+              - label: "Hero Video"
+                name: "heroVideo"
+                widget: "object"
+                fields:
+                  - { label: "Video File", name: "url", widget: "file", required: false, hint: "Upload an .mp4/.webm — plays muted & looped. Leave empty to show the drawn illustration instead." }
+
+          - label: "Award Section"
+            name: "award"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Ribbon Text", name: "ribbon", widget: "string" }
+              - { label: "Eyebrow Label", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Dateline", name: "dateline", widget: "string" }
+              - { label: "Excerpt (paragraph 1, shown on front page)", name: "excerpt", widget: "text" }
+              - { label: "Excerpt (paragraph 2, shown on front page)", name: "excerpt2", widget: "text" }
+              - label: "Full Article Paragraphs (shown on award.html)"
+                name: "fullText"
+                widget: "list"
+                hint: "The first paragraph appears beside the photo; the rest run full width."
+              - label: "Photo"
+                name: "photo"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Caption", name: "caption", widget: "string" }
+
+          - label: "Works Section"
+            name: "works"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Eyebrow Label", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Front-Page Teaser Text", name: "blurb", widget: "text" }
+              - { label: "works.html Intro Text (kept separate from teaser)", name: "pageIntro", widget: "text" }
+              - label: "Photo"
+                name: "photo"
+                widget: "object"
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Caption", name: "caption", widget: "string" }
+
+          - label: "Work Categories"
+            name: "workCategories"
+            widget: "list"
+            hint: "Each category needs its own HTML page already existing (ask for a new page if you add a category)."
+            fields:
+              - { label: "Slug (must be unique, no spaces)", name: "slug", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["uiux", "motion", "graphic"]
+              - { label: "Category Name", name: "name", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - { label: "Page Filename (e.g. work-ui-ux.html)", name: "page", widget: "string" }
+
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{title}} — {{category}}"
+            hint: "Add, remove, or reorder as many projects as you like. 'Category' must match a category slug above exactly."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tag (e.g. Fintech · Product)", name: "tag", widget: "string" }
+              - { label: "Description", name: "blurb", widget: "text" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["ui-ux-design", "motion-graphics", "graphic-design"]
+              - label: "Diagram Icon"
+                name: "diagram"
+                widget: "select"
+                options: ["browser", "mobile", "flow", "chart", "nodes", "swatch"]
+
+          - label: "About — Front Page Teaser"
+            name: "aboutIntro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Eyebrow Label", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Short Intro Text", name: "short", widget: "text" }
+
+          - label: "About — Full Article (about.html)"
+            name: "about_article_group"
+            widget: "object"
+            collapsed: true
+            fields:
+              - label: "Article Header"
+                name: "aboutArticle"
+                widget: "object"
+                fields:
+                  - { label: "Eyebrow Label", name: "eyebrow", widget: "string" }
+                  - { label: "Headline", name: "headline", widget: "string" }
+                  - { label: "Byline", name: "byline", widget: "string" }
+              - label: "Article Paragraphs"
+                name: "about"
+                widget: "list"
+                hint: "Paragraph 1 gets the drop cap + first photo; paragraph 2 gets the second photo; paragraph 3 gets the third photo below it; the rest run plain."
+              - label: "Cross-headed Sections"
+                name: "aboutSubsections"
+                widget: "list"
+                hint: "Inserted between paragraphs 1 and 2, like newspaper section breaks."
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Paragraph", name: "text", widget: "text" }
+              - label: "Article Photos (up to 3)"
+                name: "aboutImages"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "url", widget: "image", required: false }
+                  - { label: "Caption", name: "caption", widget: "string" }
+              - label: "About Video (front-page teaser)"
+                name: "aboutVideo"
+                widget: "object"
+                fields:
+                  - { label: "Video File", name: "url", widget: "file", required: false, hint: "Upload an .mp4/.webm — plays muted & looped, full color." }
+                  - { label: "Caption", name: "caption", widget: "string" }
+
+          - label: "Expertise Section"
+            name: "expertise"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Eyebrow Label", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            summary: "{{name}}"
+            hint: "Each group's items are flattened into the numbered Expertise list automatically."
+            fields:
+              - { label: "Group Name", name: "name", widget: "string" }
+              - label: "Skills in this group"
+                name: "items"
+                widget: "list"
+
+          - label: "Tools"
+            name: "tools"
+            widget: "list"
+            summary: "{{name}}"
+            fields:
+              - { label: "Tool Name", name: "name", widget: "string" }
+              - label: "Icon"
+                name: "logo"
+                widget: "select"
+                options: ["figma", "photoshop", "premiere", "aftereffects"]
+
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Intro Line", name: "lede", widget: "text" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - label: "Social Links"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - { label: "Label (e.g. LinkedIn)", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Footer Fine Print", name: "finePrint", widget: "string" }
+
+          - label: "Colors"
+            name: "colors"
+            widget: "object"
+            collapsed: true
+            hint: "Changes apply site-wide, on every page."
+            fields:
+              - { label: "Page Background (paper)", name: "paper", widget: "color" }
+              - { label: "Texture Tone (paper-2)", name: "paper2", widget: "color" }
+              - { label: "Ink (text & icons)", name: "ink", widget: "color" }
+              - { label: "Accent Red", name: "red", widget: "color" }
+              - { label: "Deep Red (drop caps, emphasis)", name: "redDeep", widget: "color" }
