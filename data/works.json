@@ -1,0 +1,35 @@
+{
+  "works": {
+    "eyebrow": "Works",
+    "headline": "The Young Man's Best Works",
+    "blurb": "A collection of projects, united by one approach: start with the people, understand the problem, and work backward to the experience. From digital products and services to visual systems and everything in between, each project is a different investigation into how design can make things work better.",
+    "pageIntro": "Three beats. Three disciplines. One designer with plenty to say. Browse the sections below for the full report, from the big ideas to the tiny details, every project has a story worth reading.",
+    "photo": {
+      "url": "images/artgallery.jpg",
+      "caption": "A look at the work"
+    }
+  },
+  "workCategories": [
+    {
+      "slug": "ui-ux-design",
+      "icon": "uiux",
+      "name": "UI/UX Design",
+      "blurb": "Digital products and services, designed from the person under pressure backward to the interface — the core of the work.",
+      "page": "work-ui-ux.html"
+    },
+    {
+      "slug": "motion-graphics",
+      "icon": "motion",
+      "name": "Motion Graphics",
+      "blurb": "Movement, timing and story — from short edits to animated sequences that give a brand or an idea some momentum.",
+      "page": "work-motion-graphics.html"
+    },
+    {
+      "slug": "graphic-design",
+      "icon": "graphic",
+      "name": "Graphic Design",
+      "blurb": "Visual identity, layout and type — the flatter, quieter craft that a lot of the digital work still leans on.",
+      "page": "work-graphic-design.html"
+    }
+  ]
+}

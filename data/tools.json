@@ -1,0 +1,20 @@
+{
+  "tools": [
+    {
+      "name": "Figma",
+      "logo": "figma"
+    },
+    {
+      "name": "Adobe Photoshop",
+      "logo": "photoshop"
+    },
+    {
+      "name": "Premiere Pro",
+      "logo": "premiere"
+    },
+    {
+      "name": "After Effects",
+      "logo": "aftereffects"
+    }
+  ]
+}

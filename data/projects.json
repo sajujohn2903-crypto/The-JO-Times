@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "tag": "Fintech · Product",
+      "title": "Ledger",
+      "blurb": "A redesigned expense workflow that cut approval time for finance teams by more than half.",
+      "diagram": "browser",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Healthcare · App",
+      "title": "Pulse",
+      "blurb": "A patient intake app rebuilt around clarity, reducing form abandonment in early trials.",
+      "diagram": "mobile",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Civic · Platform",
+      "title": "Commons",
+      "blurb": "A public services portal connecting twelve departments behind one consistent interface.",
+      "diagram": "flow",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Data · Dashboard",
+      "title": "Meridian",
+      "blurb": "An operations dashboard turning noisy telemetry into a handful of decisions worth making.",
+      "diagram": "chart",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Research · System",
+      "title": "Fieldnote",
+      "blurb": "A lightweight research repository built for teams who never had time to file their notes.",
+      "diagram": "nodes",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Brand · Design System",
+      "title": "Typeset",
+      "blurb": "A component and type system unifying six product teams under one visual language.",
+      "diagram": "swatch",
+      "category": "ui-ux-design"
+    },
+    {
+      "tag": "Motion · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this motion graphics project here.",
+      "diagram": "chart",
+      "category": "motion-graphics"
+    },
+    {
+      "tag": "Motion · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this motion graphics project here.",
+      "diagram": "flow",
+      "category": "motion-graphics"
+    },
+    {
+      "tag": "Motion · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this motion graphics project here.",
+      "diagram": "nodes",
+      "category": "motion-graphics"
+    },
+    {
+      "tag": "Graphic · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this graphic design project here.",
+      "diagram": "swatch",
+      "category": "graphic-design"
+    },
+    {
+      "tag": "Graphic · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this graphic design project here.",
+      "diagram": "browser",
+      "category": "graphic-design"
+    },
+    {
+      "tag": "Graphic · Project",
+      "title": "Project Title",
+      "blurb": "Add a description of this graphic design project here.",
+      "diagram": "mobile",
+      "category": "graphic-design"
+    }
+  ]
+}

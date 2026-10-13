@@ -1,0 +1,40 @@
+{
+  "expertise": {
+    "eyebrow": "Expertise",
+    "headline": "Areas of Expertise"
+  },
+  "skills": [
+    {
+      "name": "Design",
+      "items": [
+        "Interaction Design",
+        "Design Systems",
+        "Information Architecture",
+        "Visual Design"
+      ]
+    },
+    {
+      "name": "Prototyping",
+      "items": [
+        "Figma"
+      ]
+    },
+    {
+      "name": "Research",
+      "items": [
+        "Usability Testing",
+        "Field Studies",
+        "Journey Mapping",
+        "A/B Testing"
+      ]
+    },
+    {
+      "name": "Bonus Skills",
+      "items": [
+        "Video Editing",
+        "Motion Design",
+        "Graphic Design"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "aboutIntro": {
+    "eyebrow": "Profile",
+    "headline": "“BREAKING NEWS: JOHN SAJU HAS A SLIGHT OBSESSION WITH MAKING THINGS MAKE SENSE.”",
+    "short": "John Saju is a UX and Service Designer with a knack for turning complicated problems into clear, considered experiences. With a background in animation and a keen eye for detail, he approaches design with equal parts curiosity, craft and a healthy disregard for unnecessary complexity."
+  },
+  "aboutArticle": {
+    "eyebrow": "Profile — Full Story",
+    "headline": "LOCAL DESIGNER CAUGHT TURNING PROBLEMS INTO PIXELS",
+    "byline": "By John Saju"
+  },
+  "about": [
+    "BELFAST, NORTHERN IRELAND — In what experts are calling a rather convenient career choice, John Saju has made a habit of poking at everyday problems and asking, “Surely there’s a better way to do this?” Armed with a background in Animation & Visual Effects and a Master’s in User Experience & Service Design, John has traded timelines for user flows, keyframes for wireframes, and the occasional existential crisis for a well-organised Figma file. His work sits somewhere between design, storytelling and technology, with a particular interest in making digital experiences that are not only useful, but actually enjoyable to use."
+  ],
+  "aboutSubsections": [
+    {
+      "heading": "FROM KEYFRAMES TO USER FLOWS — A CAREER TAKES SHAPE",
+      "text": "Before entering the mysterious world of UX, John spent his days making things move. Animation, visual effects, motion graphics and video editing gave him an eye for composition, storytelling and the tiny details most people politely ignore. Somewhere along the way, however, he became increasingly interested in why people interact with things the way they do. The result? A suspiciously smooth transition into UX and service design, where research, strategy and visual design now share the front page. From apps and websites to entire services, John enjoys getting stuck into messy problems and turning them into experiences that make a little more sense."
+    },
+    {
+      "heading": "DESIGNER, STORYTELLER & PART-TIME PIXEL POLICE",
+      "text": "When he isn't rearranging buttons by precisely three pixels, John can usually be found drawing, editing videos, experimenting with new ideas or convincing himself that this is finally the perfect font. His toolkit includes Figma, Framer, Webflow, After Effects and a growing collection of digital rabbit holes. His approach to design is simple: understand the people, question the obvious, make it look good, and never underestimate the power of a ridiculously satisfying interaction. Latest reports suggest he is currently accepting interesting problems, ambitious ideas and projects worth losing sleep over."
+    }
+  ],
+  "aboutImages": [
+    {
+      "url": "",
+      "caption": "Early sketches, before anything else."
+    },
+    {
+      "url": "",
+      "caption": "Presenting the award-winning service design project."
+    },
+    {
+      "url": "",
+      "caption": "At the desk, somewhere between research and rework."
+    }
+  ],
+  "aboutVideo": {
+    "url": "images/aboutvideo.mp4",
+    "caption": "John Saju, UI/UX Designer"
+  }
+}
