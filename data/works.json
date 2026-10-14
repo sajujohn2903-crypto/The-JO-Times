@@ -14,6 +14,7 @@
       "slug": "ui-ux-design",
       "icon": "uiux",
       "name": "UI/UX Design",
+      "image": "images/thumb-ui-ux.png",
       "blurb": "Digital products and services, designed from the person under pressure backward to the interface — the core of the work.",
       "page": "work-ui-ux.html"
     },
@@ -21,6 +22,7 @@
       "slug": "motion-graphics",
       "icon": "motion",
       "name": "Motion Graphics",
+      "image": "images/thumb-motion-graphics.png",
       "blurb": "Movement, timing and story — from short edits to animated sequences that give a brand or an idea some momentum.",
       "page": "work-motion-graphics.html"
     },
@@ -28,6 +30,7 @@
       "slug": "graphic-design",
       "icon": "graphic",
       "name": "Graphic Design",
+      "image": "images/thumb-graphic-design.png",
       "blurb": "Visual identity, layout and type — the flatter, quieter craft that a lot of the digital work still leans on.",
       "page": "work-graphic-design.html"
     }

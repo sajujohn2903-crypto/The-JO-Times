@@ -121,9 +121,9 @@ const stories = cats.map((c,i)=>{
     </div>
     <div class="story__grid">
       <figure class="story__fig">
-        <div class="plate story__plate">
-          <span class="plate__tag mono">${String(i+1).padStart(2,'0')}</span>
-          <div class="plate__icon">${categoryIcon(c.icon)}</div>
+        <div class="plate story__plate${c.image ? ' plate--plain' : ''}"${c.image ? ' style="aspect-ratio:1/1"' : ''}>
+          ${c.image ? `<img src="${c.image}" alt="${c.name}">` : `<span class="plate__tag mono">${String(i+1).padStart(2,'0')}</span>
+          <div class="plate__icon">${categoryIcon(c.icon)}</div>`}
         </div>
       </figure>
       <div class="story__body">
