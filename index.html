@@ -221,10 +221,33 @@
 
 </div>
 
-<script src="config.js"></script>
 <script>
+Promise.all([
+  fetch('data/identity.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/hero.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/award.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/works.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/projects.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/about.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/expertise.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/tools.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/contact.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/colors.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); })
+]).then(function(parts){
+  var CONFIG = Object.assign.apply(Object, [{}].concat(parts));
+
+  // apply CMS-editable colors
+  if (CONFIG.colors) {
+    var root = document.documentElement.style;
+    root.setProperty('--paper', CONFIG.colors.paper);
+    root.setProperty('--paper-2', CONFIG.colors.paper2);
+    root.setProperty('--ink', CONFIG.colors.ink);
+    root.setProperty('--red', CONFIG.colors.red);
+    root.setProperty('--red-deep', CONFIG.colors.redDeep);
+  }
+
 /* ================================================================
-   RENDER — builds the DOM from CONFIG (defined in config.js).
+   RENDER — builds the DOM from CONFIG (merged from the data/ folder).
    No need to edit below unless you want to change structure/behaviour.
    ================================================================ */
 
@@ -455,6 +478,7 @@ if(fine){
     if(e.target.closest('[data-cursor]')) cursor.classList.remove('on');
   });
 }
+});
 </script>
 </body>
 </html>

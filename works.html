@@ -61,7 +61,20 @@
 </div>
 
 <script>
-fetch('content.json').then(function(r){ return r.json(); }).then(function(CONFIG){
+Promise.all([
+  fetch('data/identity.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/hero.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/award.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/works.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/projects.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/about.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/expertise.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/tools.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/contact.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/colors.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); })
+]).then(function(parts){
+  var CONFIG = Object.assign.apply(Object, [{}].concat(parts));
+
   // apply CMS-editable colors
   if (CONFIG.colors) {
     var root = document.documentElement.style;
