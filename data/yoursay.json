@@ -1,0 +1,485 @@
+{
+  "yoursay": {
+    "eyebrow": "Case Study · Service Design",
+    "title": "Your Say Belfast",
+    "byline": "A team project · Specialist Skills Development, Ulster University · 2025",
+    "award": "Institute Designers Ireland Award 2025 · Best Service Design Project",
+    "abstract": "A project to bring the public, local communities and Belfast City Council closer together. At its core is inclusivity: giving people a voice and an active part in the decisions that shape their city. Starting from three Council themes — renaturing the city, a sustainable circular economy and a net-zero emissions city — the team focused on renaturing, then found a serious gap: most residents don't know what the Council is doing for the environment, which keeps engagement low and trust lower. The answer was to improve what already exists rather than start again.",
+    "cover": {
+      "url": "images/work/yoursay-belfast/25.png",
+      "caption": "Your Say Belfast"
+    },
+    "facts": [
+      {
+        "k": "Method",
+        "v": "Double Diamond"
+      },
+      {
+        "k": "Research",
+        "v": "Surveys, 50 interviews, desk research"
+      },
+      {
+        "k": "Solution",
+        "v": "You Said, You Vote, We Did"
+      },
+      {
+        "k": "Tools",
+        "v": "Figma, Miro"
+      }
+    ],
+    "figma": "https://www.figma.com/design/NTPrgKrm0khCPPFQEFxHIY/Your-City--Your-Say?node-id=4-92&t=YLlwCvPWMq5qrQxL-1",
+    "blocks": [
+      {
+        "t": "h2",
+        "text": "Discover",
+        "kicker": "Phase 01"
+      },
+      {
+        "t": "p",
+        "text": "The project followed the UK Design Council's Double Diamond: Discover, Define, Develop and Deliver. The first diamond opens up the problem and then narrows it to a clear challenge; the second generates a wide range of solutions and narrows them to a final one. It keeps design anchored to user needs while leaving room for a creative approach to complex problems."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/01.jpg",
+        "caption": "The Double Diamond: the process model used throughout the project",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Quadruple Helix"
+      },
+      {
+        "t": "p",
+        "text": "To keep the work inclusive, the team used the Quadruple Helix model, which draws on four sectors of society: academia, industry, government and civil society. It suits complex civic issues like sustainability and urban planning, where collaboration across all four produces stronger, more user-driven solutions."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/02.jpg",
+        "caption": "The Quadruple Helix model",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Green cities"
+      },
+      {
+        "t": "p",
+        "text": "The team looked at cities with similar sustainability ambitions to see what works."
+      },
+      {
+        "t": "list",
+        "items": [
+          "Bremen: an Adopt-a-Tree scheme, strong cycling infrastructure and the Pfand deposit-return scheme for recycling.",
+          "Oslo: 95% of residents live within 300 metres of a park.",
+          "Zagreb: tree-lined streets and semi-wild forest trails keep nature close to the city.",
+          "Singapore: energy-efficiency standards for buildings and vehicles, plus vertical gardens and green roofs."
+        ]
+      },
+      {
+        "t": "h3",
+        "text": "Existing services and plans"
+      },
+      {
+        "t": "p",
+        "text": "Belfast City Council already runs a range of initiatives, including Belfast One Million Trees (one million native trees by 2035), UPSURGE (nature-based solutions for air quality and climate neutrality), Belfast Bikes, and A Bolder Vision for Belfast, a blueprint for a more attractive, accessible and vibrant city centre."
+      },
+      {
+        "t": "h3",
+        "text": "Surveys and interviews"
+      },
+      {
+        "t": "p",
+        "text": "Despite all of this activity, public involvement was minimal. Surveys in Belfast city centre showed that most people wanted a voice in Council decisions and a single place to follow what the Council is doing. Many felt the Council was inactive, which pointed to a gap between awareness and reality."
+      },
+      {
+        "t": "stats",
+        "items": [
+          {
+            "n": "50",
+            "l": "people interviewed"
+          },
+          {
+            "n": "92%+",
+            "l": "unaware of any Council plans"
+          },
+          {
+            "n": "4%",
+            "l": "uncertain"
+          }
+        ]
+      },
+      {
+        "t": "p",
+        "text": "The few who did know about the plans were Council employees."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/03.jpg",
+        "caption": "Survey results: how many people knew about Council plans",
+        "size": "full"
+      },
+      {
+        "t": "h2",
+        "text": "Define",
+        "kicker": "Phase 02"
+      },
+      {
+        "t": "h3",
+        "text": "Problem statement"
+      },
+      {
+        "t": "quote",
+        "text": "People in Belfast are unaware of and disconnected from green initiatives and actions being undertaken locally by the council, which leads to low engagement and mistrust in the initiatives for sustainability."
+      },
+      {
+        "t": "h3",
+        "text": "Stakeholder map"
+      },
+      {
+        "t": "p",
+        "text": "With the problem defined, the team mapped everyone involved in or affected by a solution: primary stakeholders (the Council, community groups, residents, local businesses), secondary stakeholders (transport and infrastructure agencies, planners, academic institutions), external stakeholders (government and investors) and internal stakeholders (volunteers and tourists)."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/04.jpg",
+        "caption": "Stakeholder map",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "User persona"
+      },
+      {
+        "t": "p",
+        "text": "Rebecca is 42 and has lived in Belfast all her life. She walks or takes the bus, loves Ormeau Park, and cares about community and sustainability. She is tech-savvy but does not follow news on social media, so she tends to hear about local events after they have happened. Council messaging feels impersonal, and surveys feel too long and abstract. She has ideas but no easy way to share them."
+      },
+      {
+        "t": "two",
+        "left": {
+          "title": "Pain points",
+          "items": [
+            "Tired of the city feeling neglected and impersonal",
+            "Often misses events she would have liked to attend",
+            "Feels Council messaging doesn't speak to her",
+            "Finds surveys too abstract and time-consuming",
+            "Struggles to see what the Council is doing",
+            "Has opinions but no clear way to share them"
+          ]
+        },
+        "right": {
+          "title": "Needs and goals",
+          "items": [
+            "To be closer to Belfast and contribute to its development",
+            "Genuine grassroots involvement in sustainability",
+            "Simple, bite-sized facts without needing to go online",
+            "Small daily actions with visible impact",
+            "A say in a more alive, sustainable city for her children"
+          ]
+        }
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/05.jpg",
+        "caption": "Persona: Meet Rebecca",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/06.jpg",
+        "caption": "Persona: Rebecca's needs and goals",
+        "size": "half"
+      },
+      {
+        "t": "h3",
+        "text": "Jobs to be done"
+      },
+      {
+        "t": "p",
+        "text": "Rebecca wants a dependable way to stay connected to her city: to find local events and green spaces during everyday routines, and to share her ideas easily and safely, without handing over personal data, and see real progress. Above all she wants to be heard, to belong, and to be included in building Belfast."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/07.jpg",
+        "caption": "Jobs to be done",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Empathy map"
+      },
+      {
+        "t": "p",
+        "text": "The empathy map showed a resident who believes in community and nature but is stuck on the outside: information is disjointed or out of date, there is little signage or open forums, and taking part in Council projects feels tedious and demoralising. Even so, she is motivated by small, positive steps that could lead to real change."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/08.jpg",
+        "caption": "Empathy map",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "User journey"
+      },
+      {
+        "t": "p",
+        "text": "Rebecca's journey runs from commuting through green spaces to lunch, work and family time. Along the way she meets litter, broken bins and little information about sustainability work, and her feelings swing from mild optimism to frustration and resignation. The biggest opportunities are better signage, central and up-to-date event listings, welcoming physical and digital touchpoints, and simpler ways to give feedback."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/09.jpg",
+        "caption": "User journey map",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "How might we"
+      },
+      {
+        "t": "quote",
+        "text": "How might we create an opportunity for existing sustainability solutions to be seen, and for new ideas to be heard?"
+      },
+      {
+        "t": "h2",
+        "text": "Develop",
+        "kicker": "Phase 03"
+      },
+      {
+        "t": "p",
+        "text": "The team set one core purpose: make sustainability efforts visible and local, so people can see what is happening and feel encouraged to take part. Brainstorming, Crazy 8s and Six Thinking Hats produced ideas such as community information boards, digital screens advertising events and initiatives, inclusive cross-community events, and QR codes linking directly to information."
+      },
+      {
+        "t": "p",
+        "text": "Further research turned up an existing Council platform, Your Say Belfast. It was a good idea held back by low visibility, and its events board had not been updated since 2022. Rather than build something new, the team chose to revive it: improve the interface, raise awareness of the platform, reactivate the events board, and position it as a key channel for local planning and decision-making."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/10.jpg",
+        "caption": "The existing Your Say Belfast platform",
+        "size": "full"
+      },
+      {
+        "t": "h2",
+        "text": "Deliver",
+        "kicker": "Phase 04"
+      },
+      {
+        "t": "h3",
+        "text": "The solution"
+      },
+      {
+        "t": "p",
+        "text": "The solution is built on a feedback loop: You Said, You Vote, We Did. It goes beyond collecting opinions by showing how community input turns into action. The platform also becomes a hub for Council initiatives, sustainability events and volunteering opportunities. Looking ahead, physical feedback points in cafés, libraries and public institutions, and partnerships such as Belfast Stories, would bring in people who are less likely to engage online."
+      },
+      {
+        "t": "steps",
+        "items": [
+          {
+            "n": "01",
+            "h": "You Said",
+            "p": "Residents scan a QR code on community boards, posters or digital screens. It takes them to Your Say Belfast, where they can submit ideas or concerns in a few taps."
+          },
+          {
+            "n": "02",
+            "h": "You Vote",
+            "p": "Other residents vote on the submitted ideas, so community priorities are chosen collectively and everyone shares ownership of the direction."
+          },
+          {
+            "n": "03",
+            "h": "We Did",
+            "p": "Ideas with strong support are reviewed and delivered by the Council, and the result is shared back through signage, social media and the platform itself."
+          }
+        ]
+      },
+      {
+        "t": "h3",
+        "text": "Service blueprint"
+      },
+      {
+        "t": "p",
+        "text": "The blueprint follows the service from public awareness (banners and posters with QR codes) through use of the platform (submitting ideas, voting, exploring the events board) to follow-up (email updates on submissions, events and the initiatives people supported). Behind the scenes, staff process feedback and keep the platform active and responsive."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/11.jpg",
+        "caption": "Service blueprint",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Storyboard"
+      },
+      {
+        "t": "p",
+        "text": "Rebecca spots a Your Say Belfast banner by a park noticeboard and scans the QR code. She submits an idea for improving a public space, gets regular email updates, and eventually sees the Council act on it. Feeling heard, she tells friends, family and neighbours."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/12.jpg",
+        "caption": "Storyboard, part one",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/13.jpg",
+        "caption": "Storyboard, part two",
+        "size": "half"
+      },
+      {
+        "t": "h3",
+        "text": "Wireframes"
+      },
+      {
+        "t": "p",
+        "text": "The redesigned homepage puts four sections up front: Have Your Say, Voting Page, Events Board and You Said, We Did. The team first planned to show them in a carousel, but carousels rotate every two to three seconds, which is long enough for people to scroll past without noticing. A static layout keeps every section visible. Dedicated wireframes cover the Have Your Say page and a Voting page, where ideas sit in a scrollable list with short descriptions and can be opened, voted on and discussed."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/14.jpg",
+        "caption": "Wireframes",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Prototype"
+      },
+      {
+        "t": "p",
+        "text": "The prototype keeps the structure and content of the existing site for consistency, with a cleaner, friendlier interface, clearly defined sections, and dedicated screens for the submission form, the ideas page and voting."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/15.jpg",
+        "caption": "Homepage",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/16.jpg",
+        "caption": "Have Your Say",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/17.jpg",
+        "caption": "Submission form",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/18.jpg",
+        "caption": "Ideas page",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/19.jpg",
+        "caption": "Voting",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/20.jpg",
+        "caption": "Track progress",
+        "size": "half"
+      },
+      {
+        "t": "h3",
+        "text": "Testing"
+      },
+      {
+        "t": "p",
+        "text": "Informal testing with a small group of peers was very positive. Testers found the layout simple and easy to navigate, liked the voting feature for being empowering, and thought the platform suited anyone wanting to follow sustainability initiatives in Belfast. They also suggested condensing Voting, Have Your Say and Events into dropdown menus so everything is reachable from the first screen, and making the Have Your Say button more prominent. The team made both changes."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/21.jpg",
+        "caption": "Usability testing responses",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Banner mockups"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/22.jpg",
+        "caption": "Banner mockup 1",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/23.jpg",
+        "caption": "Banner mockup 2",
+        "size": "half"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/24.jpg",
+        "caption": "Banner mockup 3",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Website mockup"
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/25.png",
+        "caption": "Website mockup",
+        "size": "full"
+      },
+      {
+        "t": "h2",
+        "text": "The steps for growth",
+        "kicker": "Looking ahead"
+      },
+      {
+        "t": "p",
+        "text": "The growth of the service is likened to the life cycle of a plant. It starts with planting the seed: piloting QR codes around the city. It sprouts as residents scan and share ideas, takes root when the Council acts on feedback, buds as people see results, blooms as more communities join in, and flourishes when the relationship between the Council and residents is strong and participation is widespread."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/26.jpg",
+        "caption": "The steps for growth",
+        "size": "full"
+      },
+      {
+        "t": "h3",
+        "text": "Scalability"
+      },
+      {
+        "t": "p",
+        "text": "The service can scale by expanding the Events Board and keeping up a long-term relationship between the Council and local communities. Physical feedback points keep it inclusive for people without easy digital access. Seasonal, theme-based events, such as an autumn leaf voting event on green spaces, make giving feedback creative and fun. Partnerships with cafés, small businesses and community hubs can host feedback stations and QR codes."
+      },
+      {
+        "t": "h3",
+        "text": "Success metrics"
+      },
+      {
+        "t": "list",
+        "items": [
+          "Increase in website traffic",
+          "Higher volume of QR code scans",
+          "Growth in people submitting ideas, voting and attending events",
+          "Improved resident satisfaction, measured through regular surveys and feedback"
+        ]
+      },
+      {
+        "t": "h2",
+        "text": "Outcome",
+        "kicker": "In summary"
+      },
+      {
+        "t": "p",
+        "text": "Your Say Belfast is a low-cost, high-impact solution. For the Council, extending the existing platform increases engagement, shows a commitment to inclusive governance, and produces ideas and data that support better decisions. For residents, it makes feedback easy, visible and effective, simplifies access to information and events, and builds a sense of belonging and ownership. By extending what already exists rather than starting again, it points towards a more open, responsive and connected Belfast."
+      },
+      {
+        "t": "fig",
+        "src": "images/work/yoursay-belfast/27.jpg",
+        "caption": "Your City, Your Say Belfast",
+        "size": "full"
+      }
+    ]
+  }
+}

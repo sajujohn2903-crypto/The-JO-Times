@@ -126,6 +126,9 @@ if(paragraphs[0]){
 for(let i = 1; i < paragraphs.length; i++){
   bodyHtml += `<p>${paragraphs[i]}</p>`;
 }
+if(A.caseStudy && A.caseStudy.url){
+  bodyHtml += `<p class="article-cta"><a class="link" href="${A.caseStudy.url}" data-cursor="Read &rarr;">${A.caseStudy.label || 'Read case study'} <span class="arw">&rarr;</span></a></p>`;
+}
 document.getElementById('article-body').innerHTML = bodyHtml;
 
 document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;

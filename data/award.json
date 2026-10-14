@@ -14,6 +14,10 @@
     "photo": {
       "url": "images/award_thumbnail.png",
       "caption": "Photograph: The Award 2025"
+    },
+    "caseStudy": {
+      "label": "Read case study",
+      "url": "yoursay-belfast.html"
     }
   }
 }
