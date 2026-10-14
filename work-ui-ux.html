@@ -168,18 +168,18 @@ const stories = catProjects.map((p,i)=>`
     </div>
     <div class="story__grid">
       <figure class="story__fig">
-        <div class="plate story__plate">
+        <div class="plate story__plate${p.image ? ' plate--plain' : ''}"${p.image ? ' style="aspect-ratio:16/10"' : ''}>
           <span class="plate__tag mono">${String(i+1).padStart(2,'0')}</span>
-          <div class="plate__icon">${projectSVG(p.diagram)}</div>
+          ${p.image ? `<img src="${p.image}" alt="${p.title}">` : `<div class="plate__icon">${projectSVG(p.diagram)}</div>`}
         </div>
       </figure>
       <div class="story__body">
-        <a class="story__link" href="#" data-cursor="View &rarr;">
+        <a class="story__link" href="${p.slug ? 'case-study.html?p=' + p.slug : '#'}" data-cursor="View &rarr;">
           <h3><span class="rvl"><span>${p.title}</span></span></h3>
         </a>
         <p class="story__tag mono">${p.tag}</p>
         <p class="story__dek fade" style="--d:120ms">${p.blurb}</p>
-        <a class="link story__cta fade" style="--d:200ms" href="#" data-cursor="View &rarr;">View project <span class="arw">&rarr;</span></a>
+        <a class="link story__cta fade" style="--d:200ms" href="${p.slug ? 'case-study.html?p=' + p.slug : '#'}" data-cursor="View &rarr;">Read the case study <span class="arw">&rarr;</span></a>
       </div>
     </div>
   </article>`).join('');

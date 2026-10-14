@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Case Study — The JO Times</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2vw,28px);margin:clamp(26px,3vw,40px) 0}
+.gal{align-items:start}.gal .gal--full{grid-column:1/-1}.gal figure:first-child:not(.gal--full){grid-column:auto}
+.plate--auto{aspect-ratio:auto!important}.plate--auto img{height:auto!important;display:block;object-fit:contain}
+.cs-nav{display:flex;justify-content:space-between;gap:20px;margin-top:clamp(36px,4vw,60px);padding-top:18px;border-top:1px solid var(--rule-strong)}
+@media (max-width:640px){.gal{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <header id="front">
+    <div class="topbar mono">
+      <span id="topbar-left"></span>
+    </div>
+    <div class="masthead">
+      <div>
+        <h1 class="masthead__title" id="masthead-title"></h1>
+        <div class="masthead__sub">
+          <span class="mono" id="masthead-role"></span>
+          <span class="mono editor-note" id="masthead-tagline"></span>
+        </div>
+      </div>
+      <div class="masthead__meta mono" id="masthead-meta"></div>
+    </div>
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list">
+        <li><a href="index.html">Front Page</a></li>
+        <li><a href="index.html#work">Works</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <p class="nav__status mono"><span class="dot"></span> <span id="nav-status"></span></p>
+    </nav>
+  </header>
+
+  <div class="band">
+    <a class="link back" href="work-ui-ux.html">&larr; Back to UI/UX Design</a>
+
+    <div class="article-head">
+      <p class="mono mono--l mono--red" id="article-eyebrow" style="margin-bottom:1.2em"></p>
+      <h1 id="article-headline"></h1>
+      <p class="article-byline mono" id="article-byline"></p>
+    </div>
+
+    <div class="article-body" id="article-body"></div>
+  </div>
+
+  <footer class="foot">
+    <div class="foot__top">
+      <p class="foot__mast" id="foot-mast"></p>
+      <div class="foot__meta mono" id="foot-meta"></div>
+    </div>
+    <p class="endmark"><span>End of edition</span></p>
+  </footer>
+
+</div>
+
+<script>
+Promise.all([
+  fetch('data/identity.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/hero.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/award.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/works.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/projects.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/about.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/expertise.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/tools.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/contact.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/colors.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); })
+]).then(function(parts){
+  var CONFIG = Object.assign.apply(Object, [{}].concat(parts));
+
+  // apply CMS-editable colors
+  if (CONFIG.colors) {
+    var root = document.documentElement.style;
+    root.setProperty('--paper', CONFIG.colors.paper);
+    root.setProperty('--paper-2', CONFIG.colors.paper2);
+    root.setProperty('--ink', CONFIG.colors.ink);
+    root.setProperty('--red', CONFIG.colors.red);
+    root.setProperty('--red-deep', CONFIG.colors.redDeep);
+  }
+
+document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
+document.getElementById('masthead-title').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
+document.getElementById('masthead-role').textContent = CONFIG.role;
+document.getElementById('masthead-tagline').textContent = CONFIG.editorNote;
+document.getElementById('masthead-meta').innerHTML = `<span>${CONFIG.issueLine}</span><span>${CONFIG.contact.location}</span>`;
+document.getElementById('nav-status').textContent = `Portfolio last updated ${new Date().getFullYear()}`;
+
+const slug = new URLSearchParams(location.search).get('p');
+const list = CONFIG.projects.filter(p=>p.slug);
+const idx = Math.max(0, list.findIndex(p=>p.slug === slug));
+const P = list[idx];
+document.title = P.title + ' — The JO Times';
+document.getElementById('article-eyebrow').textContent = P.tag;
+document.getElementById('article-headline').textContent = P.title;
+document.getElementById('article-byline').textContent = P.meta || 'Case Study';
+
+function placeholderPhotoSVG(){
+  return `<svg viewBox="0 0 160 90" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="40" cy="30" r="10" fill="none" stroke="var(--ink)" stroke-width="2.5"/>
+    <path d="M4 84 L52 40 L82 66 L118 26 L156 84 Z" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linejoin="round"/>
+  </svg>`;
+}
+function plateHTML(img){
+  const media = img.url ? `<img src="${img.url}" alt="${img.caption || ''}" loading="lazy">` : `<div class="plate__icon">${placeholderPhotoSVG()}</div>`;
+  return `<figure class="${img.size === 'full' ? 'gal--full' : ''}"><div class="plate article-plate${img.url ? ' plate--plain plate--auto' : ''}">${media}</div><figcaption><span>${img.caption || ''}</span></figcaption></figure>`;
+}
+let html = `<div class="article-row split"><p class="drop-cap">${P.overview}</p>${P.cover ? plateHTML(P.cover) : ''}</div>`;
+(P.sections || []).forEach(sec=>{ html += `<h3 class="article-subhead">${sec.heading}</h3><p>${sec.text}</p>`; });
+if((P.images || []).length){ html += `<h3 class="article-subhead">The Screens</h3><div class="gal">${P.images.map(plateHTML).join('')}</div>`; }
+const prev = list[(idx - 1 + list.length) % list.length], next = list[(idx + 1) % list.length];
+if(list.length > 1){
+  html += `<div class="cs-nav mono"><a class="link" href="case-study.html?p=${prev.slug}">&larr; ${prev.title}</a><a class="link" href="case-study.html?p=${next.slug}">${next.title} &rarr;</a></div>`;
+}
+document.getElementById('article-body').innerHTML = html;
+
+document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
+document.getElementById('foot-meta').innerHTML = `
+  <span>${CONFIG.name} — ${CONFIG.role}</span>
+  <span>Set in Bodoni Moda, Newsreader &amp; IBM Plex Mono</span>
+  <span>${CONFIG.contact.finePrint}</span>
+`;
+
+/* nav shadow-free scroll spy not needed on this page; reveal on scroll only */
+const targets = document.querySelectorAll('.band, .foot, header#front');
+if('IntersectionObserver' in window){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin:'0px 0px -10% 0px', threshold:0 });
+  targets.forEach(t=>io.observe(t));
+} else {
+  targets.forEach(t=>t.classList.add('is-in'));
+}
+requestAnimationFrame(()=>{
+  document.querySelector('header#front').classList.add('is-in');
+  document.querySelector('.band').classList.add('is-in');
+});
+});
+</script>
+</body>
+</html>
