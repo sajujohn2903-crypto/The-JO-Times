@@ -2,33 +2,33 @@
   "projects": [
     {
       "slug": "kairo-website",
-      "tag": "Website · 2026",
+      "tag": "Website, 2026",
       "title": "Kairo Website",
-      "blurb": "Kairo Design Bureau needed a home of its own: a site that shows how the studio thinks before a visitor has read a word.",
+      "blurb": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word.",
       "diagram": "browser",
       "category": "ui-ux-design",
-      "meta": "Kairo Design Bureau · 2026 · Web design, Motion, Development",
+      "meta": "Kairo Design Bureau, 2026. Web design, motion and development.",
       "cover": {
         "url": "images/work/kairo-website/cover.jpg",
-        "caption": "Kairo Website — cover"
+        "caption": "Kairo Website cover"
       },
-      "overview": "Kairo Design Bureau needed a home of its own: a site that shows how the studio thinks before a visitor has read a word. We designed and built it ourselves between 23 September and 7 October 2026. It is one scrolling homepage, three discipline pages and a case-study template, hosted on GitHub Pages.",
+      "overview": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word. We designed and built it ourselves between 23 September and 7 October 2026. It has one scrolling homepage, three discipline pages and a case study template, and it runs on GitHub Pages.",
       "sections": [
         {
           "heading": "The brief",
-          "text": "The brief was short: minimal, premium, easy to navigate, with motion that follows the scroll, in five brand colours. Two constraints shaped everything else. The site had to run as plain files on GitHub Pages with no build step, so the studio could update it from a browser. And nothing could be invented: no stock photos, no placeholder clients, no made-up numbers."
+          "text": "The brief was short: minimal, premium, easy to navigate, motion that follows the scroll, and five brand colours. Two rules shaped the rest. The site had to run as plain files on GitHub Pages with no build step, so the studio can update it from a browser. And nothing could be made up: no stock photos, no placeholder clients, no invented numbers."
         },
         {
           "heading": "How we worked",
-          "text": "We skipped static mock-ups and designed in the browser. Every round followed the same loop: publish a working preview, open it on a desktop and a phone, change only what was flagged, upload. The copy was edited directly on the live preview. The design system stayed small on purpose: charcoal with one gold accent per screen, Inter Tight for headlines and Inter for text, square edges, hairline rules, and one easing curve for every movement."
+          "text": "We skipped static mock-ups and designed in the browser. Each round went the same way: publish a working preview, open it on a desktop and a phone, change only what was flagged, upload. The copy was edited straight on the live preview. We kept the design system small on purpose: charcoal with one gold accent per screen, Inter Tight for headlines, Inter for text, square edges, hairline rules and a single easing curve for every movement."
         },
         {
           "heading": "The hero",
-          "text": "The first idea for the hero was a real-time 3D bowerbird that watches the cursor. For launch we chose something lighter that makes the same point: a film of the character that breathes while you are on the first screen and closes its eyes as you scroll away. On desktop the scroll scrubs a video. The iPhone would not repaint a video while it was being scrubbed, so phones draw the same film from 121 still frames instead, packed into two files."
+          "text": "The first idea was a real-time 3D bowerbird that follows the cursor. For launch we went with something lighter that does the same job: a film of the character that breathes while you're on the first screen and closes its eyes as you scroll away. On desktop, scrolling scrubs through a video. iPhones wouldn't repaint a video while it was being scrubbed, so phones play the same film from 121 still frames packed into two files."
         },
         {
           "heading": "Where it landed",
-          "text": "Testing on real devices caught two problems: the page sometimes opened part-way down, and the hero froze on iPhone. Both were fixed. The work pages came next: each discipline has its own page, and every case study uses one template fed by a single data file, so adding a project means adding a block of text and a folder of images. The site is live, and the studio's first client projects are already in it."
+          "text": "Testing on real devices turned up two problems. The page sometimes opened part-way down, and the hero froze on iPhone. Both are fixed. After that came the work pages. Each discipline has its own page, and every case study uses one template fed by a single data file, so adding a project just means adding some text and a folder of images. The site is live, and the studio's first client projects are already on it."
         }
       ],
       "images": [
@@ -92,37 +92,37 @@
     },
     {
       "slug": "food-delivery-app",
-      "tag": "Mobile app · 2026",
+      "tag": "Mobile app, 2026",
       "title": "Food Delivery App",
-      "blurb": "A food ordering app that takes a meal from menu to doorstep in five screens. Warm neutrals and a single dark accent keep the food photography as the loudest thing on screen.",
+      "blurb": "A food ordering app that gets a meal from menu to doorstep in five screens. Warm neutrals and one dark accent let the food photography stay the loudest thing on screen.",
       "diagram": "mobile",
       "category": "ui-ux-design",
-      "meta": "Concept project · 2026 · UX design, UI design, Mobile app",
+      "meta": "Concept project, 2026. UX design, UI design and mobile app.",
       "cover": {
         "url": "images/work/food-delivery-app/cover.jpg",
-        "caption": "Food Delivery App — cover"
+        "caption": "Food Delivery App cover"
       },
-      "overview": "A food ordering app that takes a meal from menu to doorstep in five screens. Warm neutrals and a single dark accent keep the food photography as the loudest thing on screen.",
+      "overview": "A food ordering app that gets a meal from menu to doorstep in five screens. Warm neutrals and one dark accent let the food photography stay the loudest thing on screen.",
       "sections": [
         {
           "heading": "The challenge",
-          "text": "Ordering apps tend to bury the decision under banners, offers and nested menus. The aim was a flow where a hungry user can pick a meal, see exactly what it costs and know when it arrives, without any detours."
+          "text": "Ordering apps tend to bury the decision under banners, offers and nested menus. The aim here was a flow where a hungry person can pick a meal, see exactly what it costs and know when it arrives, with no detours."
         },
         {
           "heading": "The approach",
-          "text": "Two menu screens feed one bag, and from there the path is linear: review, pay, confirm. Each menu card shows a photo, name, calories, a one-line description and the price, so a meal can be added straight from the list. A floating tab bar keeps Quick Bites, Healthy Diet and Desserts one tap apart."
+          "text": "Two menu screens feed one bag, and from there the path is a straight line: review, pay, confirm. Each menu card shows a photo, name, calories, a one line description and the price, so you can add a meal straight from the list. A floating tab bar keeps Quick Bites, Healthy Diet and Desserts one tap apart."
         },
         {
           "heading": "Checkout",
-          "text": "The checkout leads with the delivery address, a mapped route and a 15-minute estimate. Meal, tax, delivery and promo discount are itemised above the total, and the pay button repeats the final amount."
+          "text": "Checkout opens with the delivery address, a mapped route and a 15 minute estimate. Meal, tax, delivery and promo discount are itemised above the total, and the pay button repeats the final amount."
         },
         {
           "heading": "Order confirmation",
-          "text": "The confirmation screen shows who is delivering (name, vehicle plate, message and call shortcuts), when, and where to. It ends on a single action: Track Your Order."
+          "text": "The confirmation screen shows who's delivering (name, vehicle plate, message and call shortcuts), when they'll arrive and where they're going. It ends on one action: Track Your Order."
         },
         {
           "heading": "Visual design",
-          "text": "Five colours: cream background, sand cards, tan image tiles, cocoa for buttons and the tab bar, black for headings and icons. Headings are in Outfit and close with a full stop; body text is in Inter. Buttons and the tab bar are pill-shaped, and the plates overlap their cards."
+          "text": "Five colours: cream background, sand cards, tan image tiles, cocoa for buttons and the tab bar, and black for headings and icons. Headings are in Outfit and end with a full stop, body text is in Inter. Buttons and the tab bar are pill shaped, and the plates overlap their cards."
         }
       ],
       "images": [
@@ -156,29 +156,29 @@
     },
     {
       "slug": "cinenebula",
-      "tag": "Streaming concept · 2026",
+      "tag": "Streaming concept, 2026",
       "title": "CineNebula",
-      "blurb": "CineNebula is a streaming service concept: a featured-title screen for a film and series platform, designed for desktop and mobile. It was a self-initiated project, made to sharpen prototyping skills.",
+      "blurb": "CineNebula is a streaming service concept: a featured title screen for a film and series platform, designed for desktop and mobile. It started as a personal project to sharpen prototyping skills.",
       "diagram": "flow",
       "category": "ui-ux-design",
-      "meta": "Concept project · 2026 · UI design, Prototyping, Responsive design",
+      "meta": "Concept project, 2026. UI design, prototyping and responsive design.",
       "cover": {
         "url": "images/work/cinenebula/cover.jpg",
-        "caption": "CineNebula — cover"
+        "caption": "CineNebula cover"
       },
-      "overview": "CineNebula is a streaming service concept: a featured-title screen for a film and series platform, designed for desktop and mobile. It was a self-initiated project, made to sharpen prototyping skills.",
+      "overview": "CineNebula is a streaming service concept: a featured title screen for a film and series platform, designed for desktop and mobile. It started as a personal project to sharpen prototyping skills.",
       "sections": [
         {
           "heading": "Design",
-          "text": "One title takes the whole first screen, with its artwork, likes, year, genre and age rating. Season and episode dropdowns, Play Now and My Wishlist sit beside it, and a row of other titles runs along the bottom."
+          "text": "One title fills the first screen, with its artwork, likes, year, genre and age rating. Season and episode dropdowns, Play Now and My Wishlist sit beside it, and a row of other titles runs along the bottom."
         },
         {
           "heading": "Visual language",
-          "text": "A near-black background with a deep green glow rising from the bottom, and one brighter green kept for the likes rating. Text is set in Outfit in white, and the buttons and dropdowns use the same dark green."
+          "text": "A near black background with a deep green glow rising from the bottom, and one brighter green saved for the likes rating. Text is white Outfit, and the buttons and dropdowns use the same dark green."
         },
         {
           "heading": "Mobile",
-          "text": "On a phone the same content restacks. The artwork comes first, a menu button and search bar replace the navigation links, and the season and episode selectors share one row."
+          "text": "On a phone the same content stacks up. The artwork comes first, a menu button and search bar replace the navigation links, and the season and episode selectors share a row."
         }
       ],
       "images": [
@@ -211,42 +211,42 @@
       "image": "images/work/cinenebula/cover.jpg"
     },
     {
-      "tag": "Motion · Project",
+      "tag": "Motion project",
       "title": "Project Title",
       "blurb": "Add a description of this motion graphics project here.",
       "diagram": "chart",
       "category": "motion-graphics"
     },
     {
-      "tag": "Motion · Project",
+      "tag": "Motion project",
       "title": "Project Title",
       "blurb": "Add a description of this motion graphics project here.",
       "diagram": "flow",
       "category": "motion-graphics"
     },
     {
-      "tag": "Motion · Project",
+      "tag": "Motion project",
       "title": "Project Title",
       "blurb": "Add a description of this motion graphics project here.",
       "diagram": "nodes",
       "category": "motion-graphics"
     },
     {
-      "tag": "Graphic · Project",
+      "tag": "Graphic design project",
       "title": "Project Title",
       "blurb": "Add a description of this graphic design project here.",
       "diagram": "swatch",
       "category": "graphic-design"
     },
     {
-      "tag": "Graphic · Project",
+      "tag": "Graphic design project",
       "title": "Project Title",
       "blurb": "Add a description of this graphic design project here.",
       "diagram": "browser",
       "category": "graphic-design"
     },
     {
-      "tag": "Graphic · Project",
+      "tag": "Graphic design project",
       "title": "Project Title",
       "blurb": "Add a description of this graphic design project here.",
       "diagram": "mobile",

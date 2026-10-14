@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Case Study — The JO Times</title>
+<title>Case Study | The JO Times</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,700;0,6..96,900;1,6..96,400;1,6..96,700&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
@@ -91,7 +91,7 @@ Promise.all([
     root.setProperty('--red-deep', CONFIG.colors.redDeep);
   }
 
-document.getElementById('topbar-left').textContent = `${CONFIG.name} — Independent Design Portfolio`;
+document.getElementById('topbar-left').textContent = `${CONFIG.name}, Independent Design Portfolio`;
 document.getElementById('masthead-title').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('masthead-role').textContent = CONFIG.role;
 document.getElementById('masthead-tagline').textContent = CONFIG.editorNote;
@@ -102,7 +102,7 @@ const slug = new URLSearchParams(location.search).get('p');
 const list = CONFIG.projects.filter(p=>p.slug);
 const idx = Math.max(0, list.findIndex(p=>p.slug === slug));
 const P = list[idx];
-document.title = P.title + ' — The JO Times';
+document.title = P.title + ' | The JO Times';
 document.getElementById('article-eyebrow').textContent = P.tag;
 document.getElementById('article-headline').textContent = P.title;
 document.getElementById('article-byline').textContent = P.meta || 'Case Study';
@@ -128,7 +128,7 @@ document.getElementById('article-body').innerHTML = html;
 
 document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('foot-meta').innerHTML = `
-  <span>${CONFIG.name} — ${CONFIG.role}</span>
+  <span>${CONFIG.name}, ${CONFIG.role}</span>
   <span>Set in Bodoni Moda, Newsreader &amp; IBM Plex Mono</span>
   <span>${CONFIG.contact.finePrint}</span>
 `;

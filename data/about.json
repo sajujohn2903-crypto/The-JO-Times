@@ -2,24 +2,24 @@
   "aboutIntro": {
     "eyebrow": "Profile",
     "headline": "“BREAKING NEWS: JOHN SAJU HAS A SLIGHT OBSESSION WITH MAKING THINGS MAKE SENSE.”",
-    "short": "John Saju is a UX and Service Designer with a knack for turning complicated problems into clear, considered experiences. With a background in animation and a keen eye for detail, he approaches design with equal parts curiosity, craft and a healthy disregard for unnecessary complexity."
+    "short": "John Saju is a UX and service designer who likes taking messy problems and making them clear. He started in animation, pays close attention to detail, and has little patience for unnecessary complexity."
   },
   "aboutArticle": {
-    "eyebrow": "Profile — Full Story",
+    "eyebrow": "Profile: Full Story",
     "headline": "LOCAL DESIGNER CAUGHT TURNING PROBLEMS INTO PIXELS",
     "byline": "By John Saju"
   },
   "about": [
-    "BELFAST, NORTHERN IRELAND — In what experts are calling a rather convenient career choice, John Saju has made a habit of poking at everyday problems and asking, “Surely there’s a better way to do this?” Armed with a background in Animation & Visual Effects and a Master’s in User Experience & Service Design, John has traded timelines for user flows, keyframes for wireframes, and the occasional existential crisis for a well-organised Figma file. His work sits somewhere between design, storytelling and technology, with a particular interest in making digital experiences that are not only useful, but actually enjoyable to use."
+    "BELFAST, NORTHERN IRELAND. John Saju keeps poking at everyday problems and asking, “Surely there’s a better way to do this?” Experts call it a convenient career choice. He has a background in Animation & Visual Effects and a Master’s in User Experience & Service Design, and these days he works with user flows instead of timelines, wireframes instead of keyframes, and a tidy Figma file instead of the occasional existential crisis. His work sits somewhere between design, storytelling and technology, and what he cares about most is making digital things that are useful and also nice to use."
   ],
   "aboutSubsections": [
     {
-      "heading": "FROM KEYFRAMES TO USER FLOWS — A CAREER TAKES SHAPE",
-      "text": "Before entering the mysterious world of UX, John spent his days making things move. Animation, visual effects, motion graphics and video editing gave him an eye for composition, storytelling and the tiny details most people politely ignore. Somewhere along the way, however, he became increasingly interested in why people interact with things the way they do. The result? A suspiciously smooth transition into UX and service design, where research, strategy and visual design now share the front page. From apps and websites to entire services, John enjoys getting stuck into messy problems and turning them into experiences that make a little more sense."
+      "heading": "FROM KEYFRAMES TO USER FLOWS",
+      "text": "Before UX, John spent his days making things move. Animation, visual effects, motion graphics and video editing taught him about composition, storytelling and the small details most people ignore. Somewhere along the way he got more curious about why people use things the way they do, and the move into UX and service design felt natural. Research, strategy and visual design now sit side by side in his work. Apps, websites or whole services, he likes getting stuck into a messy problem and working at it until it makes sense."
     },
     {
       "heading": "DESIGNER, STORYTELLER & PART-TIME PIXEL POLICE",
-      "text": "When he isn't rearranging buttons by precisely three pixels, John can usually be found drawing, editing videos, experimenting with new ideas or convincing himself that this is finally the perfect font. His toolkit includes Figma, Framer, Webflow, After Effects and a growing collection of digital rabbit holes. His approach to design is simple: understand the people, question the obvious, make it look good, and never underestimate the power of a ridiculously satisfying interaction. Latest reports suggest he is currently accepting interesting problems, ambitious ideas and projects worth losing sleep over."
+      "text": "When he isn't nudging a button three pixels to the left, John is usually drawing, editing videos, trying out ideas, or telling himself this is finally the right font. He works in Figma, Framer, Webflow and After Effects. His approach is simple: understand the people, question the obvious, make it look good, and never underestimate a really satisfying interaction. He's taking on interesting problems, big ideas and projects worth losing sleep over."
     }
   ],
   "aboutImages": [

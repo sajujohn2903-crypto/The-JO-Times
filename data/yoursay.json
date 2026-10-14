@@ -1,10 +1,10 @@
 {
   "yoursay": {
-    "eyebrow": "Case Study · Service Design",
+    "eyebrow": "Case Study, Service Design",
     "title": "Your Say Belfast",
-    "byline": "A team project · Specialist Skills Development, Ulster University · 2025",
-    "award": "Institute Designers Ireland Award 2025 · Best Service Design Project",
-    "abstract": "A project to bring the public, local communities and Belfast City Council closer together. At its core is inclusivity: giving people a voice and an active part in the decisions that shape their city. Starting from three Council themes — renaturing the city, a sustainable circular economy and a net-zero emissions city — the team focused on renaturing, then found a serious gap: most residents don't know what the Council is doing for the environment, which keeps engagement low and trust lower. The answer was to improve what already exists rather than start again.",
+    "byline": "A team project for Specialist Skills Development at Ulster University, 2025",
+    "award": "Institute Designers Ireland Award 2025, Best Service Design Project",
+    "abstract": "This project set out to bring the public, local communities and Belfast City Council closer together. The idea underneath it is simple: people should have a voice in the decisions that shape their city. The team started with three Council themes, which were renaturing the city, a sustainable circular economy and a net zero emissions city, and settled on renaturing. Then they found the real problem. Most residents don't know what the Council is doing for the environment, so engagement stays low and trust is lower. The answer was to improve what already exists instead of building something new.",
     "cover": {
       "url": "images/work/yoursay-belfast/25.png",
       "caption": "Your Say Belfast"
@@ -36,7 +36,7 @@
       },
       {
         "t": "p",
-        "text": "The project followed the UK Design Council's Double Diamond: Discover, Define, Develop and Deliver. The first diamond opens up the problem and then narrows it to a clear challenge; the second generates a wide range of solutions and narrows them to a final one. It keeps design anchored to user needs while leaving room for a creative approach to complex problems."
+        "text": "The project followed the UK Design Council's Double Diamond: Discover, Define, Develop and Deliver. The first diamond opens up the problem and then narrows it to a clear challenge; the second generates a wide range of solutions and narrows them to a final one. It keeps the work tied to what users need and still leaves room to be creative."
       },
       {
         "t": "fig",
@@ -50,7 +50,7 @@
       },
       {
         "t": "p",
-        "text": "To keep the work inclusive, the team used the Quadruple Helix model, which draws on four sectors of society: academia, industry, government and civil society. It suits complex civic issues like sustainability and urban planning, where collaboration across all four produces stronger, more user-driven solutions."
+        "text": "To keep the work inclusive, the team used the Quadruple Helix model, which draws on four sectors of society: academia, industry, government and civil society. It works well for big civic problems like sustainability and urban planning, where getting all four groups talking leads to better answers."
       },
       {
         "t": "fig",
@@ -269,7 +269,7 @@
       },
       {
         "t": "p",
-        "text": "The solution is built on a feedback loop: You Said, You Vote, We Did. It goes beyond collecting opinions by showing how community input turns into action. The platform also becomes a hub for Council initiatives, sustainability events and volunteering opportunities. Looking ahead, physical feedback points in cafés, libraries and public institutions, and partnerships such as Belfast Stories, would bring in people who are less likely to engage online."
+        "text": "The solution is built on a feedback loop: You Said, You Vote, We Did. It doesn't stop at collecting opinions. It shows people what happened because of them. The platform also becomes the place to find Council projects, sustainability events and volunteering. Looking ahead, physical feedback points in cafés, libraries and public institutions, and partnerships such as Belfast Stories, would bring in people who are less likely to engage online."
       },
       {
         "t": "steps",
@@ -472,7 +472,7 @@
       },
       {
         "t": "p",
-        "text": "Your Say Belfast is a low-cost, high-impact solution. For the Council, extending the existing platform increases engagement, shows a commitment to inclusive governance, and produces ideas and data that support better decisions. For residents, it makes feedback easy, visible and effective, simplifies access to information and events, and builds a sense of belonging and ownership. By extending what already exists rather than starting again, it points towards a more open, responsive and connected Belfast."
+        "text": "Your Say Belfast is a low-cost, high-impact solution. For the Council, extending the existing platform increases engagement, shows a commitment to inclusive governance, and produces ideas and data that support better decisions. For residents, it makes feedback easy, visible and effective, simplifies access to information and events, and builds a sense of belonging and ownership. By building on what already exists instead of starting again, it could make the Council feel more open and easier to talk to."
       },
       {
         "t": "fig",

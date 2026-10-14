@@ -2,8 +2,8 @@
   "works": {
     "eyebrow": "Works",
     "headline": "The Young Man's Best Works",
-    "blurb": "A collection of projects, united by one approach: start with the people, understand the problem, and work backward to the experience. From digital products and services to visual systems and everything in between, each project is a different investigation into how design can make things work better.",
-    "pageIntro": "Three beats. Three disciplines. One designer with plenty to say. Browse the sections below for the full report, from the big ideas to the tiny details, every project has a story worth reading.",
+    "blurb": "These projects share one way of working. Start with the people, understand the problem, then work backwards to the experience. They range from digital products and services to visual systems, and each one is a different attempt to make things work better.",
+    "pageIntro": "Three disciplines, one designer with plenty to say. Pick a section below to read the story behind each project, from the big ideas to the small details.",
     "photo": {
       "url": "images/artgallery.jpg",
       "caption": "A look at the work"
@@ -15,7 +15,7 @@
       "icon": "uiux",
       "name": "UI/UX Design",
       "image": "images/thumb-ui-ux.png",
-      "blurb": "Digital products and services, designed from the person under pressure backward to the interface — the core of the work.",
+      "blurb": "Digital products and services, designed from the person under pressure backwards to the interface. This is where most of the work happens.",
       "page": "work-ui-ux.html"
     },
     {
@@ -23,7 +23,7 @@
       "icon": "motion",
       "name": "Motion Graphics",
       "image": "images/thumb-motion-graphics.png",
-      "blurb": "Movement, timing and story — from short edits to animated sequences that give a brand or an idea some momentum.",
+      "blurb": "Movement, timing and story, from short edits to animated sequences that give a brand or an idea some momentum.",
       "page": "work-motion-graphics.html"
     },
     {
@@ -31,7 +31,7 @@
       "icon": "graphic",
       "name": "Graphic Design",
       "image": "images/thumb-graphic-design.png",
-      "blurb": "Visual identity, layout and type — the flatter, quieter craft that a lot of the digital work still leans on.",
+      "blurb": "Visual identity, layout and type. It's the quieter, flatter side of design, but a lot of the digital work leans on it.",
       "page": "work-graphic-design.html"
     }
   ]
