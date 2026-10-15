@@ -93,7 +93,8 @@ Promise.all([
   fetch('data/identity.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
   fetch('data/contact.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
   fetch('data/colors.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
-  fetch('data/yoursay.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); })
+  fetch('data/yoursay.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); }),
+  fetch('data/projects.json?v=' + Date.now(), {cache:'no-store'}).then(function(r){ return r.json(); })
 ]).then(function(parts){
   var CONFIG = Object.assign.apply(Object, [{}].concat(parts));
   if (CONFIG.colors) {
@@ -152,7 +153,12 @@ Y.blocks.forEach(b=>{
 });
 flush();
 html += `<div class="cs-links mono"><a class="link" href="${Y.figma}" target="_blank" rel="noopener">View the Figma file <span class="arw">&rarr;</span></a><a class="link" href="award.html">Back to the article <span class="arw">&rarr;</span></a></div>`;
-html += `<div class="article-close"><p class="mono mono--red">Up next</p><a class="article-close__title" href="case-study.html?p=ecocraft">EcoCraft <span class="arw">&rarr;</span></a><p class="article-close__line">A website that connects Belfast's local artisans with buyers, built around pop-up markets in unused spaces.</p></div>`;
+(function(){
+  var list = CONFIG.projects.filter(function(p){ return p.slug; });
+  var i = list.findIndex(function(p){ return p.slug === 'yoursay-belfast'; });
+  var n = i > -1 ? list[i + 1] : null;
+  if(n){ html += `<div class="article-close"><p class="mono mono--red">Up next</p><a class="article-close__title" href="${n.href || 'case-study.html?p=' + n.slug}">${n.title} <span class="arw">&rarr;</span></a><p class="article-close__line">${n.blurb}</p></div>`; }
+})();
 document.getElementById('article-body').innerHTML = html;
 /* ---------- Contact button changes to suit the page ---------- */
 (function(title){

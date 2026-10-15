@@ -124,13 +124,13 @@ function plateHTML(img){
 let html = `<div class="article-row split"><p class="drop-cap">${P.overview}</p>${P.cover ? plateHTML(P.cover) : ''}</div>`;
 (P.sections || []).forEach(sec=>{ html += `<h3 class="article-subhead">${sec.heading}</h3><p>${sec.text}</p>`; });
 if((P.images || []).length){ html += `<h3 class="article-subhead">The Screens</h3><div class="gal">${P.images.map(plateHTML).join('')}</div>`; }
-const prev = list[(idx - 1 + list.length) % list.length], next = list[(idx + 1) % list.length];
-if(list.length > 1){
+const prev = idx > 0 ? list[idx - 1] : null, next = idx < list.length - 1 ? list[idx + 1] : null;
+if(next){
   html += `<div class="article-close"><p class="mono mono--red">Up next</p><a class="article-close__title" href="${hrefOf(next)}">${next.title} <span class="arw">&rarr;</span></a><p class="article-close__line">${next.blurb}</p></div>`;
+} else {
+  html += `<div class="article-close"><p class="mono mono--red">That's the last one</p><a class="article-close__title" href="work-ui-ux.html">All UI/UX work <span class="arw">&rarr;</span></a></div>`;
 }
-if(list.length > 1){
-  html += `<div class="cs-nav mono"><a class="link" href="${hrefOf(prev)}">&larr; ${prev.title}</a><a class="link" href="${hrefOf(next)}">${next.title} &rarr;</a></div>`;
-}
+html += `<div class="cs-nav mono">${prev ? `<a class="link" href="${hrefOf(prev)}">&larr; ${prev.title}</a>` : '<span></span>'}${next ? `<a class="link" href="${hrefOf(next)}">${next.title} &rarr;</a>` : '<span></span>'}</div>`;
 document.getElementById('article-body').innerHTML = html;
 /* ---------- Contact button changes to suit the page ---------- */
 (function(title){
