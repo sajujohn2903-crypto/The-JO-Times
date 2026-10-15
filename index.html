@@ -67,7 +67,8 @@
       <ul class="nav__list">
         <li><a href="#work">Works</a></li>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="nav__push"><a href="cv.pdf" download>CV</a></li>
+        <li class="nav__cta"><a href="#contact">Contact</a></li>
       </ul>
       <p class="nav__status mono"><span class="dot"></span> <span id="nav-status"></span></p>
     </nav>
@@ -203,6 +204,7 @@
         <p class="contact__dek fade" style="--d:200ms" id="contact-lede"></p>
         <div class="contact__cta fade" style="--d:300ms">
           <a class="link" id="contact-email-cta" data-cursor="Write &rarr;">Get in touch <span class="arw">&rarr;</span></a>
+          <a class="link" id="cv-cta" href="cv.pdf" download data-cursor="Download &darr;">Download CV <span class="arw">&darr;</span></a>
         </div>
       </div>
 
@@ -320,7 +322,7 @@ if(CONFIG.heroVideo && CONFIG.heroVideo.url){
 const skillCount = CONFIG.skills.reduce((sum,g)=>sum+g.items.length,0);
 const stats = [
   { n:"01", l:"Featured story" },
-  { n:String(CONFIG.projects.length).padStart(2,'0'), l:"Selected projects" },
+  { n:String(CONFIG.projects.filter(p=>p.slug).length).padStart(2,'0'), l:"Selected projects" },
   { n:String(skillCount).padStart(2,'0'), l:"Areas of expertise" },
   { n:String(today.getFullYear()), l:"Current edition" }
 ];
@@ -349,7 +351,7 @@ if(A.photo.url){
 /* ---------- works teaser ---------- */
 const W = CONFIG.works;
 document.getElementById('works-title').textContent = W.eyebrow;
-document.getElementById('works-meta').innerHTML = `<span>${CONFIG.projects.length} selected projects</span>`;
+document.getElementById('works-meta').innerHTML = `<span>${CONFIG.projects.filter(p=>p.slug).length} selected projects</span>`;
 document.getElementById('works-blurb').textContent = W.blurb;
 
 const worksPhotoImg = document.getElementById('works-photo-img');
@@ -439,6 +441,11 @@ requestAnimationFrame(()=>{
   document.querySelector('.hero').classList.add('is-in');
   document.querySelector('header#front').classList.add('is-in');
 });
+
+/* ---------- Contact button: scroll to the section and flash it ---------- */
+function flashContact(){ var c = document.getElementById('contact'); if(!c) return; c.classList.remove('flash'); void c.offsetWidth; c.classList.add('flash'); setTimeout(function(){ c.classList.remove('flash'); }, 1800); }
+document.querySelectorAll('a[href="#contact"]').forEach(function(a){ a.addEventListener('click', function(){ setTimeout(flashContact, 450); }); });
+if(location.hash === '#contact'){ setTimeout(flashContact, 700); }
 
 /* ---------- current section in the nav ---------- */
 const navLinks = [...document.querySelectorAll('.nav__list a')];

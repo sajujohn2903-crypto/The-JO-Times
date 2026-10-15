@@ -59,7 +59,8 @@
       <ul class="nav__list">
         <li><a href="index.html">Front Page</a></li>
         <li><a href="index.html#work">Works</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav__push"><a href="cv.pdf" download>CV</a></li>
+        <li class="nav__cta"><a href="index.html#contact">Contact</a></li>
       </ul>
       <p class="nav__status mono"><span class="dot"></span> <span id="nav-status"></span></p>
     </nav>
@@ -151,7 +152,15 @@ Y.blocks.forEach(b=>{
 });
 flush();
 html += `<div class="cs-links mono"><a class="link" href="${Y.figma}" target="_blank" rel="noopener">View the Figma file <span class="arw">&rarr;</span></a><a class="link" href="award.html">Back to the article <span class="arw">&rarr;</span></a></div>`;
+html += `<div class="article-close"><p class="mono mono--red">Up next</p><a class="article-close__title" href="case-study.html?p=ecocraft">EcoCraft <span class="arw">&rarr;</span></a><p class="article-close__line">A website that connects Belfast's local artisans with buyers, built around pop-up markets in unused spaces.</p></div>`;
 document.getElementById('article-body').innerHTML = html;
+/* ---------- Contact button changes to suit the page ---------- */
+(function(title){
+  var a = document.querySelector('.nav__cta a'); if(!a) return;
+  var mail = 'mailto:' + CONFIG.contact.email + '?subject=' + encodeURIComponent('About ' + title + ' on your portfolio');
+  a.textContent = "Like this? Let's talk"; a.href = mail;
+})('Your Say Belfast');
+
 
 document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('foot-meta').innerHTML = `
@@ -172,5 +181,6 @@ requestAnimationFrame(()=>{
 });
 });
 </script>
+<script src="lightbox.js"></script>
 </body>
 </html>

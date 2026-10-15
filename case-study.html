@@ -38,7 +38,8 @@
       <ul class="nav__list">
         <li><a href="index.html">Front Page</a></li>
         <li><a href="index.html#work">Works</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li class="nav__push"><a href="cv.pdf" download>CV</a></li>
+        <li class="nav__cta"><a href="index.html#contact">Contact</a></li>
       </ul>
       <p class="nav__status mono"><span class="dot"></span> <span id="nav-status"></span></p>
     </nav>
@@ -102,6 +103,8 @@ const slug = new URLSearchParams(location.search).get('p');
 const list = CONFIG.projects.filter(p=>p.slug);
 const idx = Math.max(0, list.findIndex(p=>p.slug === slug));
 const P = list[idx];
+if(P.href){ location.replace(P.href); }
+const hrefOf = p => p.href || ('case-study.html?p=' + p.slug);
 document.title = P.title + ' | The JO Times';
 document.getElementById('article-eyebrow').textContent = P.tag;
 if(P.badge){ const b = document.createElement('span'); b.className = 'badge mono'; b.textContent = P.badge; b.style.marginLeft = '1em'; document.getElementById('article-eyebrow').appendChild(b); }
@@ -123,9 +126,19 @@ let html = `<div class="article-row split"><p class="drop-cap">${P.overview}</p>
 if((P.images || []).length){ html += `<h3 class="article-subhead">The Screens</h3><div class="gal">${P.images.map(plateHTML).join('')}</div>`; }
 const prev = list[(idx - 1 + list.length) % list.length], next = list[(idx + 1) % list.length];
 if(list.length > 1){
-  html += `<div class="cs-nav mono"><a class="link" href="case-study.html?p=${prev.slug}">&larr; ${prev.title}</a><a class="link" href="case-study.html?p=${next.slug}">${next.title} &rarr;</a></div>`;
+  html += `<div class="article-close"><p class="mono mono--red">Up next</p><a class="article-close__title" href="${hrefOf(next)}">${next.title} <span class="arw">&rarr;</span></a><p class="article-close__line">${next.blurb}</p></div>`;
+}
+if(list.length > 1){
+  html += `<div class="cs-nav mono"><a class="link" href="${hrefOf(prev)}">&larr; ${prev.title}</a><a class="link" href="${hrefOf(next)}">${next.title} &rarr;</a></div>`;
 }
 document.getElementById('article-body').innerHTML = html;
+/* ---------- Contact button changes to suit the page ---------- */
+(function(title){
+  var a = document.querySelector('.nav__cta a'); if(!a) return;
+  var mail = 'mailto:' + CONFIG.contact.email + '?subject=' + encodeURIComponent('About ' + title + ' on your portfolio');
+  a.textContent = "Like this? Let's talk"; a.href = mail;
+})(P.title);
+
 
 document.getElementById('foot-mast').innerHTML = `THE <span class="amp">${CONFIG.maskheadShort}</span> TIMES`;
 document.getElementById('foot-meta').innerHTML = `
@@ -150,5 +163,6 @@ requestAnimationFrame(()=>{
 });
 });
 </script>
+<script src="lightbox.js"></script>
 </body>
 </html>

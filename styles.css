@@ -425,3 +425,36 @@ figcaption b{font-weight:500;color:var(--ink)}
 
 .badge{display:inline-block;margin-top:10px;padding:4px 10px;border:1px solid var(--red);color:var(--red);font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
 #article-eyebrow .badge{margin-top:0;vertical-align:middle}
+
+/* ---- nav: CV link and Contact button ---- */
+html{scroll-behavior:smooth}
+#contact{scroll-margin-top:20px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.nav__list .nav__push a{border-right:0}
+.nav__list .nav__cta a{background:var(--red);color:var(--paper);border-right:0;padding-left:clamp(1em,1.8vw,2em);padding-right:clamp(1em,1.8vw,2em)}
+.nav__list .nav__cta a::before{display:none}
+.nav__list .nav__cta a:hover,.nav__list .nav__cta a[aria-current="true"]{background:var(--red-deep);color:var(--paper)}
+.band.flash{animation:flash 1.6s ease-out 1}
+@keyframes flash{0%{box-shadow:inset 0 0 0 3px var(--red)}100%{box-shadow:inset 0 0 0 3px transparent}}
+.contact__cta{display:flex;flex-wrap:wrap;gap:1.4em}
+
+/* ---- image viewer ---- */
+.article-plate img{cursor:zoom-in}
+body.lb-open{overflow:hidden}
+.lb{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;gap:12px;padding:clamp(12px,3vw,40px);background:rgba(18,18,18,.92)}
+.lb[hidden]{display:none}
+.lb__fig{margin:0;max-width:min(1500px,100%);max-height:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.lb__fig img{max-width:100%;max-height:calc(100vh - 110px);width:auto;height:auto;object-fit:contain;background:#fff;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+.lb__fig figcaption{color:#e8e8e4;font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-align:center}
+.lb__x,.lb__nav{background:transparent;border:1px solid #e8e8e4;color:#e8e8e4;cursor:pointer;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:.7em 1em}
+.lb__x{position:absolute;top:14px;right:14px}
+.lb__x:hover,.lb__nav:hover{background:#e8e8e4;color:#111}
+.lb--single .lb__nav{display:none}
+@media (max-width:700px){.lb__nav{position:absolute;bottom:14px}.lb__nav--prev{left:14px}.lb__nav--next{right:14px}.lb__fig img{max-height:calc(100vh - 150px)}}
+
+/* ---- closing "Up next" line ---- */
+.article-close{margin-top:clamp(40px,5vw,72px);padding-top:22px;border-top:2px solid var(--ink)}
+.article-close__title{display:inline-block;margin-top:.5em;font-family:var(--display, 'Bodoni Moda', serif);font-weight:900;text-transform:uppercase;font-size:clamp(28px,4vw,52px);line-height:1;color:var(--ink);text-decoration:none}
+.article-close__title:hover{color:var(--red)}
+.article-close__line{margin-top:.8em;max-width:46ch;color:var(--ink-60)}
+

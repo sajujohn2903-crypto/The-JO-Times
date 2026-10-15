@@ -89,6 +89,25 @@
       "image": "images/work/ecocraft/cover.jpg"
     },
     {
+      "slug": "yoursay-belfast",
+      "href": "yoursay-belfast.html",
+      "tag": "Service design, 2025",
+      "badge": "Award winner",
+      "title": "Your Say Belfast",
+      "blurb": "A service design project that helps Belfast residents see what the City Council is doing for the environment, and have a say in it. It won Best Service Design Project at the Institute Designers Ireland Awards 2025.",
+      "diagram": "browser",
+      "category": "ui-ux-design",
+      "meta": "A team project for Specialist Skills Development at Ulster University, 2025",
+      "cover": {
+        "url": "images/work/yoursay-belfast/25.png",
+        "caption": "Your Say Belfast"
+      },
+      "image": "images/work/yoursay-belfast/25.png",
+      "overview": "",
+      "sections": [],
+      "images": []
+    },
+    {
       "slug": "food-delivery-app",
       "tag": "Mobile app, 2026",
       "title": "Food Delivery App",
