@@ -211,6 +211,94 @@
       "image": "images/work/cinenebula/cover.jpg"
     },
     {
+      "slug": "ecocraft",
+      "tag": "Website, 2025",
+      "title": "EcoCraft",
+      "blurb": "A website that connects Belfast's local artisans with buyers, built around pop-up markets in unused spaces.",
+      "diagram": "browser",
+      "category": "ui-ux-design",
+      "meta": "Group project with Katie, Shiva and Laura, 2025. UX research, prototyping and web design.",
+      "overview": "EcoCraft is an e-commerce website for local artisans in Belfast. The idea is to hold art events and markets in unused or run-down spaces, then let artisans sell online through their own profiles. It was a group project for UXD700, Exploration and Enquiry, submitted in January 2025.",
+      "sections": [
+        {
+          "heading": "The problem",
+          "text": "Local artists told us their biggest struggle is getting seen. Many sell mostly through social media, compete with sellers offering the same product, and have few ways to reach a wider audience. Meanwhile, public money has been spent on land that sits unused. We asked: how might we create a marketspace that helps local artisans sell their products sustainably and strengthens community connections in Belfast?"
+        },
+        {
+          "heading": "Research",
+          "text": "We surveyed artisans and customers, and also sent a survey to Belfast City Council about using empty spaces, though we never heard back. Most artisans were comfortable with online platforms and with QR codes at a market. Ninety-one percent of customers were comfortable scanning QR codes, and they said good photos, full product descriptions and easy access matter most on a website. We also looked at existing markets and online sellers, including St George's Market, Wolf and Badger, Craft NI and The Market Co."
+        },
+        {
+          "heading": "Who it's for",
+          "text": "We worked from two personas, Claire, a ceramic potter who wants a wider audience and less admin, and David, a sustainability-minded buyer who struggles to find local makers. Empathy maps and journey maps for both showed the same gap: people meet at a market, but there is nothing to carry that connection online afterwards."
+        },
+        {
+          "heading": "The solution",
+          "text": "Customers see something they like at a market, scan a QR code, and land on the artisan's profile to browse and buy. Artisans create a profile, list products and promote events, and can switch between buyer and seller views. The site also has search, an events page, reviews and a wishlist. We went from paper sketches to a low fidelity prototype, then a final design in a green palette chosen to suit the sustainable focus."
+        },
+        {
+          "heading": "Sustainability",
+          "text": "Artisans carry less stock to each market, since buyers can order the rest online. Digital promotion replaces flyers, and reusing empty spaces avoids new building. The project links to four UN Sustainable Development Goals: 8, 11, 12 and 13."
+        },
+        {
+          "heading": "What we didn't get to",
+          "text": "We ran out of time to test the website with real users, so the design is untested. That would be the next step, along with a reply from the Council about the spaces."
+        }
+      ],
+      "images": [
+        {
+          "url": "images/work/ecocraft/01.jpg",
+          "caption": "Persona: Claire, a ceramic potter in Belfast",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/02.jpg",
+          "caption": "Persona: David, a sustainability-minded buyer",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/03.jpg",
+          "caption": "Customer journey map",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/04.jpg",
+          "caption": "Artisan journey map",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/05.jpg",
+          "caption": "Customer storyboard: from spotting a QR code at a market to ordering online",
+          "size": "full"
+        },
+        {
+          "url": "images/work/ecocraft/06.jpg",
+          "caption": "Low fidelity layout concepts",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/07.jpg",
+          "caption": "The EcoCraft logo",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/08.jpg",
+          "caption": "Final screens: log in, sign up, events, profiles, product page and cart",
+          "size": "full"
+        },
+        {
+          "url": "images/work/ecocraft/09.jpg",
+          "caption": "Final screens: seller profile, orders, product gallery and adding products",
+          "size": "full"
+        }
+      ],
+      "cover": {
+        "url": "images/work/ecocraft/cover.jpg",
+        "caption": "EcoCraft on a laptop and phone"
+      },
+      "image": "images/work/ecocraft/cover.jpg"
+    },
+    {
       "tag": "Motion project",
       "title": "Project Title",
       "blurb": "Add a description of this motion graphics project here.",
