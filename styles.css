@@ -422,3 +422,6 @@ figcaption b{font-weight:500;color:var(--ink)}
 }
 
 .article-cta{margin-top:clamp(26px,3vw,44px)!important;padding-top:18px;border-top:1px solid var(--rule-strong)}
+
+.badge{display:inline-block;margin-top:10px;padding:4px 10px;border:1px solid var(--red);color:var(--red);font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.4}
+#article-eyebrow .badge{margin-top:0;vertical-align:middle}

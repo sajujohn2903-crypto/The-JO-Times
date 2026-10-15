@@ -1,94 +1,92 @@
 {
   "projects": [
     {
-      "slug": "kairo-website",
-      "tag": "Website, 2026",
-      "title": "Kairo Website",
-      "blurb": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word.",
+      "slug": "ecocraft",
+      "tag": "Website, 2025",
+      "title": "EcoCraft",
+      "blurb": "A website that connects Belfast's local artisans with buyers, built around pop-up markets in unused spaces.",
       "diagram": "browser",
       "category": "ui-ux-design",
-      "meta": "Kairo Design Bureau, 2026. Web design, motion and development.",
-      "cover": {
-        "url": "images/work/kairo-website/cover.jpg",
-        "caption": "Kairo Website cover"
-      },
-      "overview": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word. We designed and built it ourselves between 23 September and 7 October 2026. It has one scrolling homepage, three discipline pages and a case study template, and it runs on GitHub Pages.",
+      "meta": "Group project with Katie, Shiva and Laura, 2025. UX research, prototyping and web design.",
+      "overview": "EcoCraft is an e-commerce website for local artisans in Belfast. The idea is to hold art events and markets in unused or run-down spaces, then let artisans sell online through their own profiles. It was a group project for UXD700, Exploration and Enquiry, submitted in January 2025.",
       "sections": [
         {
-          "heading": "The brief",
-          "text": "The brief was short: minimal, premium, easy to navigate, motion that follows the scroll, and five brand colours. Two rules shaped the rest. The site had to run as plain files on GitHub Pages with no build step, so the studio can update it from a browser. And nothing could be made up: no stock photos, no placeholder clients, no invented numbers."
+          "heading": "The problem",
+          "text": "Local artists told us their biggest struggle is getting seen. Many sell mostly through social media, compete with sellers offering the same product, and have few ways to reach a wider audience. Meanwhile, public money has been spent on land that sits unused. We asked: how might we create a marketspace that helps local artisans sell their products sustainably and strengthens community connections in Belfast?"
         },
         {
-          "heading": "How we worked",
-          "text": "We skipped static mock-ups and designed in the browser. Each round went the same way: publish a working preview, open it on a desktop and a phone, change only what was flagged, upload. The copy was edited straight on the live preview. We kept the design system small on purpose: charcoal with one gold accent per screen, Inter Tight for headlines, Inter for text, square edges, hairline rules and a single easing curve for every movement."
+          "heading": "Research",
+          "text": "We surveyed artisans and customers, and also sent a survey to Belfast City Council about using empty spaces, though we never heard back. Most artisans were comfortable with online platforms and with QR codes at a market. Ninety-one percent of customers were comfortable scanning QR codes, and they said good photos, full product descriptions and easy access matter most on a website. We also looked at existing markets and online sellers, including St George's Market, Wolf and Badger, Craft NI and The Market Co."
         },
         {
-          "heading": "The hero",
-          "text": "The first idea was a real-time 3D bowerbird that follows the cursor. For launch we went with something lighter that does the same job: a film of the character that breathes while you're on the first screen and closes its eyes as you scroll away. On desktop, scrolling scrubs through a video. iPhones wouldn't repaint a video while it was being scrubbed, so phones play the same film from 121 still frames packed into two files."
+          "heading": "Who it's for",
+          "text": "We worked from two personas, Claire, a ceramic potter who wants a wider audience and less admin, and David, a sustainability-minded buyer who struggles to find local makers. Empathy maps and journey maps for both showed the same gap: people meet at a market, but there is nothing to carry that connection online afterwards."
         },
         {
-          "heading": "Where it landed",
-          "text": "Testing on real devices turned up two problems. The page sometimes opened part-way down, and the hero froze on iPhone. Both are fixed. After that came the work pages. Each discipline has its own page, and every case study uses one template fed by a single data file, so adding a project just means adding some text and a folder of images. The site is live, and the studio's first client projects are already on it."
+          "heading": "The solution",
+          "text": "Customers see something they like at a market, scan a QR code, and land on the artisan's profile to browse and buy. Artisans create a profile, list products and promote events, and can switch between buyer and seller views. The site also has search, an events page, reviews and a wishlist. We went from paper sketches to a low fidelity prototype, then a final design in a green palette chosen to suit the sustainable focus."
+        },
+        {
+          "heading": "Sustainability",
+          "text": "Artisans carry less stock to each market, since buyers can order the rest online. Digital promotion replaces flyers, and reusing empty spaces avoids new building. The project links to four UN Sustainable Development Goals: 8, 11, 12 and 13."
+        },
+        {
+          "heading": "What we didn't get to",
+          "text": "We ran out of time to test the website with real users, so the design is untested. That would be the next step, along with a reply from the Council about the spaces."
         }
       ],
       "images": [
         {
-          "url": "images/work/kairo-website/01.jpg",
-          "caption": "The brief: what the site had to do, the five-colour palette and the ground rules",
+          "url": "images/work/ecocraft/01.jpg",
+          "caption": "Persona: Claire, a ceramic potter in Belfast",
           "size": "half"
         },
         {
-          "url": "images/work/kairo-website/02.jpg",
-          "caption": "Process flow chart in nine steps, from the brief to real projects going in",
+          "url": "images/work/ecocraft/02.jpg",
+          "caption": "Persona: David, a sustainability-minded buyer",
           "size": "half"
         },
         {
-          "url": "images/work/kairo-website/03.jpg",
-          "caption": "Site map showing the homepage, three discipline pages, the case-study template and the project form",
+          "url": "images/work/ecocraft/03.jpg",
+          "caption": "Customer journey map",
           "size": "half"
         },
         {
-          "url": "images/work/kairo-website/04.jpg",
-          "caption": "The nine sections of the homepage with a colour rhythm strip",
+          "url": "images/work/ecocraft/04.jpg",
+          "caption": "Artisan journey map",
           "size": "half"
         },
         {
-          "url": "images/work/kairo-website/05.jpg",
-          "caption": "Design system: colour, logo and stamp, typography, components and motion",
+          "url": "images/work/ecocraft/05.jpg",
+          "caption": "Customer storyboard: from spotting a QR code at a market to ordering online",
           "size": "full"
         },
         {
-          "url": "images/work/kairo-website/06.jpg",
-          "caption": "The hero interaction: three scroll states, the film timeline and how it plays on desktop and phone",
+          "url": "images/work/ecocraft/06.jpg",
+          "caption": "Low fidelity layout concepts",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/07.jpg",
+          "caption": "The EcoCraft logo",
+          "size": "half"
+        },
+        {
+          "url": "images/work/ecocraft/08.jpg",
+          "caption": "Final screens: log in, sign up, events, profiles, product page and cart",
           "size": "full"
         },
         {
-          "url": "images/work/kairo-website/07.jpg",
-          "caption": "Work pages and case-study template",
-          "size": "half"
-        },
-        {
-          "url": "images/work/kairo-website/08.jpg",
-          "caption": "The five-step Start a project form on desktop and phone",
-          "size": "half"
-        },
-        {
-          "url": "images/work/kairo-website/09.jpg",
-          "caption": "Five phone screens from the site",
+          "url": "images/work/ecocraft/09.jpg",
+          "caption": "Final screens: seller profile, orders, product gallery and adding products",
           "size": "full"
-        },
-        {
-          "url": "images/work/kairo-website/10.jpg",
-          "caption": "Closing call to action: Got something worth building?",
-          "size": "half"
-        },
-        {
-          "url": "images/work/kairo-website/11.jpg",
-          "caption": "Footer with the Kairo wordmark",
-          "size": "half"
         }
       ],
-      "image": "images/work/kairo-website/cover.jpg"
+      "cover": {
+        "url": "images/work/ecocraft/cover.jpg",
+        "caption": "EcoCraft on a laptop and phone"
+      },
+      "image": "images/work/ecocraft/cover.jpg"
     },
     {
       "slug": "food-delivery-app",
@@ -211,92 +209,95 @@
       "image": "images/work/cinenebula/cover.jpg"
     },
     {
-      "slug": "ecocraft",
-      "tag": "Website, 2025",
-      "title": "EcoCraft",
-      "blurb": "A website that connects Belfast's local artisans with buyers, built around pop-up markets in unused spaces.",
+      "slug": "kairo-website",
+      "tag": "Website, 2026",
+      "title": "Kairo Website",
+      "blurb": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word.",
       "diagram": "browser",
       "category": "ui-ux-design",
-      "meta": "Group project with Katie, Shiva and Laura, 2025. UX research, prototyping and web design.",
-      "overview": "EcoCraft is an e-commerce website for local artisans in Belfast. The idea is to hold art events and markets in unused or run-down spaces, then let artisans sell online through their own profiles. It was a group project for UXD700, Exploration and Enquiry, submitted in January 2025.",
+      "meta": "Kairo Design Bureau, 2026. Web design, motion and development.",
+      "cover": {
+        "url": "images/work/kairo-website/cover.jpg",
+        "caption": "Kairo Website cover"
+      },
+      "overview": "Kairo Design Bureau needed a home of its own, a site that shows how the studio thinks before anyone reads a word. We designed and built it ourselves between 23 September and 7 October 2026. It has one scrolling homepage, three discipline pages and a case study template, and it runs on GitHub Pages.",
       "sections": [
         {
-          "heading": "The problem",
-          "text": "Local artists told us their biggest struggle is getting seen. Many sell mostly through social media, compete with sellers offering the same product, and have few ways to reach a wider audience. Meanwhile, public money has been spent on land that sits unused. We asked: how might we create a marketspace that helps local artisans sell their products sustainably and strengthens community connections in Belfast?"
+          "heading": "The brief",
+          "text": "The brief was short: minimal, premium, easy to navigate, motion that follows the scroll, and five brand colours. Two rules shaped the rest. The site had to run as plain files on GitHub Pages with no build step, so the studio can update it from a browser. And nothing could be made up: no stock photos, no placeholder clients, no invented numbers."
         },
         {
-          "heading": "Research",
-          "text": "We surveyed artisans and customers, and also sent a survey to Belfast City Council about using empty spaces, though we never heard back. Most artisans were comfortable with online platforms and with QR codes at a market. Ninety-one percent of customers were comfortable scanning QR codes, and they said good photos, full product descriptions and easy access matter most on a website. We also looked at existing markets and online sellers, including St George's Market, Wolf and Badger, Craft NI and The Market Co."
+          "heading": "How we worked",
+          "text": "We skipped static mock-ups and designed in the browser. Each round went the same way: publish a working preview, open it on a desktop and a phone, change only what was flagged, upload. The copy was edited straight on the live preview. We kept the design system small on purpose: charcoal with one gold accent per screen, Inter Tight for headlines, Inter for text, square edges, hairline rules and a single easing curve for every movement."
         },
         {
-          "heading": "Who it's for",
-          "text": "We worked from two personas, Claire, a ceramic potter who wants a wider audience and less admin, and David, a sustainability-minded buyer who struggles to find local makers. Empathy maps and journey maps for both showed the same gap: people meet at a market, but there is nothing to carry that connection online afterwards."
+          "heading": "The hero",
+          "text": "The first idea was a real-time 3D bowerbird that follows the cursor. For launch we went with something lighter that does the same job: a film of the character that breathes while you're on the first screen and closes its eyes as you scroll away. On desktop, scrolling scrubs through a video. iPhones wouldn't repaint a video while it was being scrubbed, so phones play the same film from 121 still frames packed into two files."
         },
         {
-          "heading": "The solution",
-          "text": "Customers see something they like at a market, scan a QR code, and land on the artisan's profile to browse and buy. Artisans create a profile, list products and promote events, and can switch between buyer and seller views. The site also has search, an events page, reviews and a wishlist. We went from paper sketches to a low fidelity prototype, then a final design in a green palette chosen to suit the sustainable focus."
-        },
-        {
-          "heading": "Sustainability",
-          "text": "Artisans carry less stock to each market, since buyers can order the rest online. Digital promotion replaces flyers, and reusing empty spaces avoids new building. The project links to four UN Sustainable Development Goals: 8, 11, 12 and 13."
-        },
-        {
-          "heading": "What we didn't get to",
-          "text": "We ran out of time to test the website with real users, so the design is untested. That would be the next step, along with a reply from the Council about the spaces."
+          "heading": "Where it landed",
+          "text": "Testing on real devices turned up two problems. The page sometimes opened part-way down, and the hero froze on iPhone. Both are fixed. After that came the work pages. Each discipline has its own page, and every case study uses one template fed by a single data file, so adding a project just means adding some text and a folder of images. The site is live, and the studio's first client projects are already on it."
         }
       ],
       "images": [
         {
-          "url": "images/work/ecocraft/01.jpg",
-          "caption": "Persona: Claire, a ceramic potter in Belfast",
+          "url": "images/work/kairo-website/01.jpg",
+          "caption": "The brief: what the site had to do, the five-colour palette and the ground rules",
           "size": "half"
         },
         {
-          "url": "images/work/ecocraft/02.jpg",
-          "caption": "Persona: David, a sustainability-minded buyer",
+          "url": "images/work/kairo-website/02.jpg",
+          "caption": "Process flow chart in nine steps, from the brief to real projects going in",
           "size": "half"
         },
         {
-          "url": "images/work/ecocraft/03.jpg",
-          "caption": "Customer journey map",
+          "url": "images/work/kairo-website/03.jpg",
+          "caption": "Site map showing the homepage, three discipline pages, the case-study template and the project form",
           "size": "half"
         },
         {
-          "url": "images/work/ecocraft/04.jpg",
-          "caption": "Artisan journey map",
+          "url": "images/work/kairo-website/04.jpg",
+          "caption": "The nine sections of the homepage with a colour rhythm strip",
           "size": "half"
         },
         {
-          "url": "images/work/ecocraft/05.jpg",
-          "caption": "Customer storyboard: from spotting a QR code at a market to ordering online",
+          "url": "images/work/kairo-website/05.jpg",
+          "caption": "Design system: colour, logo and stamp, typography, components and motion",
           "size": "full"
         },
         {
-          "url": "images/work/ecocraft/06.jpg",
-          "caption": "Low fidelity layout concepts",
-          "size": "half"
-        },
-        {
-          "url": "images/work/ecocraft/07.jpg",
-          "caption": "The EcoCraft logo",
-          "size": "half"
-        },
-        {
-          "url": "images/work/ecocraft/08.jpg",
-          "caption": "Final screens: log in, sign up, events, profiles, product page and cart",
+          "url": "images/work/kairo-website/06.jpg",
+          "caption": "The hero interaction: three scroll states, the film timeline and how it plays on desktop and phone",
           "size": "full"
         },
         {
-          "url": "images/work/ecocraft/09.jpg",
-          "caption": "Final screens: seller profile, orders, product gallery and adding products",
+          "url": "images/work/kairo-website/07.jpg",
+          "caption": "Work pages and case-study template",
+          "size": "half"
+        },
+        {
+          "url": "images/work/kairo-website/08.jpg",
+          "caption": "The five-step Start a project form on desktop and phone",
+          "size": "half"
+        },
+        {
+          "url": "images/work/kairo-website/09.jpg",
+          "caption": "Five phone screens from the site",
           "size": "full"
+        },
+        {
+          "url": "images/work/kairo-website/10.jpg",
+          "caption": "Closing call to action: Got something worth building?",
+          "size": "half"
+        },
+        {
+          "url": "images/work/kairo-website/11.jpg",
+          "caption": "Footer with the Kairo wordmark",
+          "size": "half"
         }
       ],
-      "cover": {
-        "url": "images/work/ecocraft/cover.jpg",
-        "caption": "EcoCraft on a laptop and phone"
-      },
-      "image": "images/work/ecocraft/cover.jpg"
+      "image": "images/work/kairo-website/cover.jpg",
+      "badge": "Building with AI"
     },
     {
       "tag": "Motion project",

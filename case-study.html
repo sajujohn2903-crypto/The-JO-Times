@@ -104,6 +104,7 @@ const idx = Math.max(0, list.findIndex(p=>p.slug === slug));
 const P = list[idx];
 document.title = P.title + ' | The JO Times';
 document.getElementById('article-eyebrow').textContent = P.tag;
+if(P.badge){ const b = document.createElement('span'); b.className = 'badge mono'; b.textContent = P.badge; b.style.marginLeft = '1em'; document.getElementById('article-eyebrow').appendChild(b); }
 document.getElementById('article-headline').textContent = P.title;
 document.getElementById('article-byline').textContent = P.meta || 'Case Study';
 

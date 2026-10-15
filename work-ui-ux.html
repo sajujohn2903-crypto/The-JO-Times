@@ -177,7 +177,7 @@ const stories = catProjects.map((p,i)=>`
         <a class="story__link" href="${p.slug ? 'case-study.html?p=' + p.slug : '#'}" data-cursor="View &rarr;">
           <h3><span class="rvl"><span>${p.title}</span></span></h3>
         </a>
-        <p class="story__tag mono">${p.tag}</p>
+        <p class="story__tag mono">${p.tag}</p>${p.badge ? `<p class="badge mono">${p.badge}</p>` : ''}
         <p class="story__dek fade" style="--d:120ms">${p.blurb}</p>
         <a class="link story__cta fade" style="--d:200ms" href="${p.slug ? 'case-study.html?p=' + p.slug : '#'}" data-cursor="View &rarr;">Read the case study <span class="arw">&rarr;</span></a>
       </div>
